@@ -1,0 +1,15 @@
+
+
+footer {
+    width: 100vw;
+    /*height: 200px;*/
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    min-height: 120px;
+    background-color: #686868;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+}
