@@ -1,0 +1,65 @@
+
+header {
+    width: 100vw;
+    /*height: 200px;*/
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+
+}
+
+header h2 {
+    display: flex;
+    font-size: 3rem;
+    text-align: center;
+    min-width: 90vw;
+}
+
+.top-header{
+    width: 100%;
+    min-height: 120px;
+    background-color: #686868;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gg-user{
+    margin-top: 15px;
+    transform: scale(2);
+}
+
+.bottom-header{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-button {
+    width: 20vw;
+    height: 25px;
+    outline: 2px solid #000000;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A0A0A0;
+}
+
+.header-button:hover{
+    background-color: #C9C9C9;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+
+}
