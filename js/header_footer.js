@@ -36,9 +36,8 @@ function add_footer(){
     addCss('../css/footer.css')
 }
 
-function main(){
+function build_template(){
     add_header()
     add_footer()
 }
 
-window.onload = main
