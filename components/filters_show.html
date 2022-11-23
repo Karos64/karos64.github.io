@@ -1,0 +1,170 @@
+<a onclick="hide_filters()">
+    <i id="arrow" class="gg-arrow-up-o"></i>
+    &nbsp;Zwiń filtry
+</a>
+<form action="search" id="filters_form">
+
+    <div id="selects">
+        <div class="one_select">
+            <label for="wojewodztwo">Województwo</label>
+            <select name="wojewodztwo" id="wojewodztwo" class="dropdown-select">
+                <option value="" disabled selected>Wybierz województwo...</option>
+                <option value="dolnoslaskie">dolnośląskie</option>
+                <option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
+                <option value="lubelskie">lubelskie</option>
+                <option value="lodzkie">łódzkie</option>
+                <option value="malopolskie">małopolskie</option>
+                <option value="mazowieckie">mazowieckie</option>
+                <option value="opolskie">opolskie</option>
+                <option value="podkarpackie">podkarpackie</option>
+                <option value="podlaskie">podlaskie</option>
+                <option value="pomorskie">pomorskie</option>
+                <option value="slaskie">śląskie</option>
+                <option value="swietokrzyskie">świętokrzyskie</option>
+                <option value="warminsko-mazurskie">warmińsko-mazurskie</option>
+                <option value="wielkopolskie">wielkopolskie</option>
+                <option value="zachodniopomorskie">zachodniopomorskie</option>
+            </select>
+        </div>
+
+        <div class="one_select">
+            <label for="miasto">Miasto</label>
+            <select name="miasto" id="miasto" class="dropdown-select">
+                <option value="" disabled selected>Wybierz miasto...</option>
+                <option value="warszawa">Warszawa</option>
+                <option value="krakow">Kraków</option>
+                <option value="wroclaw">Wrocław</option>
+                <option value="lodz">Łódź</option>
+                <option value="gdynia">Gdynia</option>
+                <option value="poznan">Poznań</option>
+                <option value="gdansk">Gdańsk</option>
+                <option value="szczecin">Szczecin</option>
+                <option value="bydgoszcz">Bydgoszcz</option>
+                <option value="lublin">Lublin</option>
+                <option value="bialystok">Białystok</option>
+                <option value="kielce">Kielce</option>
+                <option value="bielsko">Bielsko-biała</option>
+                <option value="sosnowiec">Sosnowiec</option>
+                <option value="katowice">Katowice</option>
+            </select>
+        </div>
+
+        <div class="one_select">
+            <label for="plec">Płeć</label>
+            <select name="plec" id="plec" class="dropdown-select">
+                <option value="" disabled selected>Wybierz płeć...</option>
+                <option value="samiec">Samiec</option>
+                <option value="samica">Samica</option>
+            </select>
+        </div>
+
+        <div class="one_select">
+            <label for="rasa">Rasa</label>
+            <select name="rasa" id="rasa" class="dropdown-select">
+                <option value="" disabled selected>Wybierz rase...</option>
+                <option value="Jack_Russell">Jack Russell</option>
+                <option value="Owczarek_niemiecki">Owczarek niemiecki</option>
+                <option value="Labrador_Retriever">Labrador Retriever</option>
+                <option value="Golden_Retriever">Golden Retriever</option>
+                <option value="Bernenski_pasterski">Berneński pies pasterski</option>
+                <option value="Husky">Husky</option>
+                <option value="Akita_Iny">Akita Inu</option>
+                <option value="Jamnik">Jamnik</option>
+                <option value="Bulldog">Bulldog</option>
+                <option value="Mieszany">Mieszany</option>
+            </select>
+        </div>
+
+        <div class="one_select">
+            <label for="waga">Przedział wagowy</label>
+            <select name="waga" id="waga" class="dropdown-select">
+                <option value="" disabled selected>Wybierz wagę...</option>
+                <option value="0-1">0-1 kg</option>
+                <option value="1-2">1-2 kg</option>
+                <option value="3-4">3-4 kg</option>
+                <option value="4-5">4-5 kg</option>
+                <option value="5-10">5-10 kg</option>
+                <option value="10-15">10-15 kg</option>
+                <option value="15-">15 kg i więcej</option>
+            </select>
+        </div>
+
+        <div class="one_select">
+            <label for="wiek">Wiek</label>
+            <select name="wiek" id="wiek" class="dropdown-select">
+                <option value="" disabled selected>Wybierz wiek...</option>
+                <option value="0-1"><1</option>
+                <option value="1-2">1-2</option>
+                <option value="3-4">3-4</option>
+                <option value="4-5">4-5</option>
+                <option value="5-10">5-10</option>
+                <option value="10-15">10-15</option>
+                <option value="15-">15</option>
+            </select>
+        </div>
+
+        <div class="one_select">
+            <label for="wzrost">Wzrost</label>
+            <select name="wzrost" id="wzrost" class="dropdown-select">
+                <option value="" disabled selected>Wybierz wzrost...</option>
+                <option value="30-50">30-50 cm</option>
+                <option value="50-70">50-70 cm</option>
+                <option value="70-100">70-100 cm</option>
+                <option value="100-150">100-150 cm</option>
+            </select>
+        </div>
+
+        <div class="one_select">
+            <label for="rodowod">Z rodowodem</label>
+            <select name="rodowod" id="rodowod" class="dropdown-select">
+                <option value="" disabled selected>Czy musi posiadać rodowód?</option>
+                <option value="tak">Tak</option>
+                <option value="nie">Nie</option>
+            </select>
+        </div>
+
+        <div class="one_select">
+            <label for="schronisko">Schronisko</label>
+            <select name="schronisko" id="schronisko" class="dropdown-select">
+                <option value="" disabled selected>Wybierz konkretne schronisko...</option>
+                <option value="dog_no_home">DogNoHome Kraków</option>
+                <option value="psia_lapa">Schronikso Psia Łapa</option>
+                <option value="pomagamy">Pomagamy pieskom</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <span><b> Dodatkowe opcje: </b></span>
+    <br>
+    <div id="checkboxes">
+        <div class="one_checkbox">
+            <input type="checkbox" id="spacery" name="spacery" value="spacery">
+            <label for="spacery">Lubi spacery</label>
+        </div>
+        <div class="one_checkbox">
+            <input type="checkbox" id="szczepienia" name="szczepienia" value="szczepienia">
+            <label for="szczepienia">Szczepienia</label>
+        </div>
+        <div class="one_checkbox">
+            <input type="checkbox" id="zabawa" name="zabawa" value="zabawa">
+            <label for="zabawa">Uwielbia zabawę</label>
+        </div>
+        <div class="one_checkbox">
+            <input type="checkbox" id="samotnosc" name="samotnosc" value="samotnosc">
+            <label for="samotnosc">Źle znosi samotność</label>
+        </div>
+        <div class="one_checkbox">
+            <input type="checkbox" id="przyjazny" name="przyjazny" value="przyjazny">
+            <label for="przyjazny">Przyjazny dzieciom</label>
+        </div>
+        <div class="one_checkbox">
+            <input type="checkbox" id="szkolony" name="szkolony" value="szkolony">
+            <label for="szkolony">Szkolony</label>
+        </div>
+        <div class="one_checkbox">
+            <input type="checkbox" id="akceptuje_zwierzeta" name="akceptuje_zwierzeta" value="akceptuje_zwierzeta">
+            <label for="akceptuje_zwierzeta">Akceptuje inne zwierzęta </label>
+        </div>
+    </div>
+    <button type="submit" id="submit_button">Zastosuj filtry</button>
+</form>
