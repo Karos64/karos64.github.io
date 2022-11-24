@@ -49,6 +49,7 @@ const menus = {
     "/pages/give.html":          1,
     "/pages/donate.html":        2,
     "/pages/cooperation.html":   3,
+    "/pages/register_shelter.html": 3,
     "/pages/contact.html":       4
 }
 
