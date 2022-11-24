@@ -10,7 +10,7 @@ function addCss(path){
 function add_header(){
     let request = new XMLHttpRequest();
     request.addEventListener("load", function(evt){
-        console.log(evt);
+        //console.log(evt);
     }, false);
 
     request.open('GET', '../components/header.html', false)
@@ -25,7 +25,7 @@ function add_header(){
 function add_footer(){
     let request = new XMLHttpRequest();
     request.addEventListener("load", function(evt){
-        console.log(evt);
+        //console.log(evt);
     }, false);
 
     request.open('GET', '../components/footer.html', false)
