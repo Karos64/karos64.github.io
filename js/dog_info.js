@@ -38,13 +38,13 @@ const showCalendar = () => {
             ${months[month-1]}
         </div>
         <div class="weekdays flex">
-            <div class="weekday">po</div>
+            <div class="weekday">pon</div>
             <div class="weekday">wt</div>
-            <div class="weekday">sr</div>
-            <div class="weekday">cz</div>
-            <div class="weekday">pi</div>
-            <div class="weekday">so</div>
-            <div class="weekday">ni</div>
+            <div class="weekday">śr</div>
+            <div class="weekday">czw</div>
+            <div class="weekday">pt</div>
+            <div class="weekday">sb</div>
+            <div class="weekday">nd</div>
         </div>
         <div class="days flex">
             ${dayslist}

@@ -39,5 +39,22 @@ function add_footer(){
 function build_template(){
     add_header()
     add_footer()
+    lightUpOption()
 }
 
+const loc = window.location.pathname;
+const menus = {
+    "/pages/adopet.html":        0,
+    "/pages/pet.html":           0,
+    "/pages/give.html":          1,
+    "/pages/donate.html":        2,
+    "/pages/cooperation.html":   3,
+    "/pages/contact.html":       4
+}
+
+function lightUpOption() {
+    options = document.getElementsByClassName('header-button');
+    chosenOne = document.getElementsByClassName('header-button')[menus[loc]];
+    if(chosenOne === null || chosenOne === undefined) return;
+    chosenOne.style.background = "#cdcdcd";
+}

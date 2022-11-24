@@ -39,16 +39,21 @@ header h2 {
 }
 
 .bottom-header{
-    max-width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.bottom-header a {
+    width: 20%;
+}
+
 .header-button {
-    width: 20vw;
+    width: 100%;
     height: 25px;
     outline: 2px solid #000000;
+    border-top: 2px solid black;
     border-right: none;
     display: flex;
     align-items: center;
