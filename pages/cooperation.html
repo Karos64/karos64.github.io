@@ -7,47 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adop(e)t</title>
     <style></style>
-    <script type="text/javascript"  src="../js/header_footer.js"></script>
+    <script type="text/javascript" src="../js/header_footer.js"></script>
+    <script type="text/javascript" defer src="../js/cooperation.js"></script>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/register_forms.css">
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gentium-book-basic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana"/>
 </head>
-<body id="body" onload="build_template();build_content()">
+<body id="body" onload="build_template()">
   <main>
-    <h2 id="h2">Chcesz nawiązać współpracę? Zarejestruj swoje schronisko</h2>
-    <form id="data_form">
+    <h2 class="h2">Chcesz nawiązać współpracę? Zarejestruj swoje schronisko</h2>
+    <form class="data_form">
         <label>Nazwa</label>
-        <input type="text" placeholder="Nazwa" required><br>
-        <div id="address">
-            <div id="street">
+        <input type="text" id="name" placeholder="Nazwa" required><br>
+        <div class="address">
+            <div class="street">
                 <label>Ulica</label>
-                <input type="text" placeholder="Ulica" required>
+                <input type="text" id="street" placeholder="Ulica" required>
             </div>
-            <div id="number">
+            <div class="number">
                 <label>Numer</label>
-                <input type="text" placeholder="Numer" required>
+                <input type="text" id="street-nr" placeholder="Numer" required>
             </div>
-            <div id="zip_code">
+            <div class="zip_code">
                 <label>Kod pocztowy</label>
-                <input type="text" placeholder="Kod pocztowy" required>
+                <input type="text" id="zip-code" placeholder="Kod pocztowy" required>
             </div>
-            <div id="city">
+            <div class="city">
                 <label>Miasto</label>
-                <input type="text" placeholder="Miasto" required>
+                <input type="text" id="city" placeholder="Miasto" required>
             </div>
         </div><br>
         <label>NIP</label>
-        <input type="text" placeholder="NIP" required><br>
+        <input type="text" id="nip" placeholder="NIP" required><br>
         <label>REGON</label>
-        <input type="text" placeholder="REGON" required><br>
+        <input type="text" id="regon" placeholder="REGON" required><br>
         <label>KRS</label>
-        <input type="text" placeholder="KRS"><br>
+        <input type="text" id="krs" placeholder="KRS"><br>
         <label>Numer konta bankowego</label>
-        <input type="text" placeholder="Numer konta bankowego" required><br>
+        <input type="text" id="bank" placeholder="Numer konta bankowego" required><br>
         <div class="button">
             <a href="register_shelter.html">
-                <input type="button" id="submit_button" value="Zatwierdź">
+                <input type="button" class="submit_button" value="Zatwierdź">
             </a>
         </div>
     </form>

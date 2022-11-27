@@ -3,17 +3,17 @@ main {
     min-height: 50vw;
 }
 
-#navigation {
+.navigation {
     position: relative;
 }
-#h2, #h2_ {
+.h2, .h2_ {
     font-size: 3vw;
     font-weight: normal;
     padding-top: 2vw;
     text-align: center;
 }
 
-#backButton {
+.backButton {
     position: absolute;
     width: 4vw;
     height: 4vw;
@@ -21,7 +21,7 @@ main {
     left: 28%;
 }
 
-#data_form, #register_form {
+.data_form, .register_form {
     position: absolute;
     margin: 0;
     display: flex;
@@ -29,7 +29,7 @@ main {
     justify-content: center;
 }
 
-#data_form {
+.data_form {
     width: 60.5vw;
     padding-bottom: 3vw;
     top: 50%;
@@ -37,7 +37,7 @@ main {
     transform: translate(-50%, -50%);
 }
 
-#register_form {
+.register_form {
     width: 30vw;
     padding-bottom: 4vw;
     top: 40%;
@@ -51,35 +51,35 @@ input {
     font-family: "Gentium Book Basic";
 }
 
-#data_form input {
+.data_form input {
     height: 2.2vw;
     width: 60.3vw;
 }
 
-#register_form input {
+.register_form input {
     height: 3vw;
     width: 30vw;
 }
 
-#address {
+.address {
     width: 60.5vw;
     display: flex;
 }
 
-#street, #number, #zip_code, #city {
+.street, .number, .zip_code, .city {
     margin-right: 0.5vw;
     width: 15vw;
 }
 
-#city {
+.city {
     margin: 0;
 }
 
-#address input {
+.address input {
     width: 14.5vw;
 }
 
-#submit_button, #register_button {
+.submit_button, .register_button {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -90,13 +90,13 @@ input {
     border: 1px black solid;
 }
 
-.button #submit_button {
+.button .submit_button {
     width: 10vw;
     bottom: 0;
     right: 0;
 }
 
-.button #register_button {
+.button .register_button {
     width: 10vw;
     height: 2.5vw;
     bottom: 0;

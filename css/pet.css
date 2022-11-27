@@ -43,7 +43,7 @@ main {
 }
 
 .dog-img img {
-    width: 100%;
+    height: 45vh;
 }
 
 .dog-name {

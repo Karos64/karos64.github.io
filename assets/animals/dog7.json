@@ -1,0 +1,18 @@
+{
+    "id": 7,
+    "title": "Pluto",
+    "img": "../imgs/dog7.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ex mattis, viverra nunc vitae, vestibulum nunc. In eu augue et urna maximus auctor sed in sapien. Morbi commodo, justo non lobortis fringilla, lacus ex tristique dui, ac laoreet est ex vel nisi. Donec dapibus dictum sapien a pretium. Nulla quis tristique neque. Aenean in lorem nec lacus mollis maximus nec sit amet erat. Phasellus in suscipit lacus, non scelerisque dolor. Aliquam erat volutpat. Sed massa sapien, commodo scelerisque dapibus ac, imperdiet malesuada lacus. Morbi sollicitudin sem arcu, vestibulum porttitor felis accumsan ut. Etiam sodales sodales sapien sagittis vehicula. Integer aliquam risus et ante consectetur, et iaculis ante consectetur. Nullam aliquam dui id ipsum tincidunt semper.",
+    "gender": "samica",
+    "weight": 22,
+    "height": 60,
+    "age": "9 lat",
+    "pedigree": "tak",
+    "breed": "mieszana",
+    "shelter": "DoggyHome - Szaflarska 99, 40-000 Katowice",
+    "tags": [
+        "Źle znosi samotność",
+        "Akceptuje inne zwierzęta",
+        "Uwielbia zabawę"
+    ]
+}
