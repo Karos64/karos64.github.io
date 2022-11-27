@@ -60,7 +60,7 @@ const createFiles = () => {
             'gender': ['samiec', 'samica'].random(),
             'weight': getRandomInt(19, 26),
             'height': getRandomInt(48, 62),
-            'age': getRandomInt(3, 9),
+            'age': getRandomInt(3, 9), // this is outdated
             'pedigree': ['tak', 'nie'].random(),
             'breed': 'mieszana',
             'shelter': shelters.random(),

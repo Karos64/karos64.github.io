@@ -18,7 +18,7 @@ const buildAnimalPanel = () => {
                 <p>${pet['gender']}</p>
                 <p>${pet['weight']} kg</p>
                 <p>${pet['height']} cm</p>
-                <p>${pet['age']} lata</p>
+                <p>${pet['age']}</p>
                 <p>${pet['pedigree']}</p>
                 <p>${pet['breed']}</p>
                 <p>${pet['shelter']}</p>
