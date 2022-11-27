@@ -1,43 +1,11 @@
-function randomize(array){
-    return array[Math.floor(Math.random()*array.length)];
+function randomize(array) {
+    return array[Math.floor(Math.random() * array.length)];
 }
 
-function create_data(){
-    let animal_json = [
-        {
-            "id": 1,
-            "title": "Łajka",
-            "img": "../imgs/doggy.jpg",
-        },
-    ];
+// how many animals does we have in assets/animals
+const ANIMAL_COUNT = 11
 
-    let names = [
-        'Astro', 'Balto', 'Barney', 'Barry', 'Beethoven', 'Benji', 'Kieł', 'Boo', 'Boss', 'Bruiser', 'Chojrak',
-        'Cywil', 'Droopy', 'Dżok', 'Eddie', 'Goofy', 'Fala', 'Happy', 'Hooch', 'Huckelberry', 'Kibic', 'Lampo',
-        'Lassie', 'Łajka', 'Madison', 'Odie', 'Pankracy', 'Piorun', 'Pluto', 'Reksio', 'Ren', 'Rex', 'Rin Tin Tin',
-        'Saba', 'Scooby Doo']
-
-    let img_array = []
-
-    for(let i=1; i<=9; i++){
-        // img_array.push(fs.readFileSync(path.join(__dirname + `/../img/dog${i}.jpg`)).toString('hex'))
-        img_array.push(`../imgs/dog${i}.jpg`)
-    }
-
-    for(let i=2; i<20; i++){
-        animal_json.push(
-            {
-                'id': i,
-                'title': randomize(names),
-                'img': randomize(img_array)
-            }
-        )
-    }
-
-    return animal_json
-}
-
-function createElement(elem){
+function createElement(elem) {
     let wrap_main = document.querySelector('#main_blocks');
 
     if (wrap_main != null) {
@@ -56,7 +24,7 @@ function createElement(elem){
 
         let description = document.createElement("span");
         description.classList.add("description");
-        if (elem['title'].length > 23){
+        if (elem['title'].length > 23) {
             elem['title'] = elem['title'].substring(0, 20) + "...";
 
         }
@@ -75,18 +43,31 @@ function createElement(elem){
 
 }
 
-function wrap_data(data){
+const build_content = () => {
+    let fetches = []
+    let animal_json = []
 
-    return JSON.parse(JSON.stringify(data));
-}
-
-
-function build_content(){
-    let parsed_data = wrap_data(create_data());
-
-    for( let elem in parsed_data){
-        createElement(parsed_data[elem]);
+    // load all animal files
+    for (let i = 1; i <= ANIMAL_COUNT; i++) {
+        fetches.push(
+            fetch(`../assets/animals/dog${i}.json`)
+                .then((response) => response.json())
+                .then((json) => {
+                    animal_json.push({
+                        'id': i,
+                        'title': json['title'],
+                        'img': `../imgs/dog${i}.jpg`
+                    })
+                })
+        )
     }
 
+    // wait for all of them to load
+    Promise.all(fetches).then(() => {
+        let parsed_data = JSON.parse(JSON.stringify(animal_json))
+        for (let elem in parsed_data) {
+            createElement(parsed_data[elem]);
+        }
+    })
 }
 
