@@ -1,0 +1,107 @@
+main {
+    position: relative;
+    min-height: 50vw;
+}
+
+
+#h2, #h2_ {
+    font-size: 3vw;
+    font-weight: normal;
+    padding-top: 2vw;
+    text-align: center;
+}
+
+#data_form {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#data_form * {
+    height: 2.2vw;
+    font-size: 1vw;
+    color: black;
+    font-family: "Gentium Book Basic";
+    /* width: 60.3vw; */
+} 
+
+#data_form label {
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin-bottom: 3vw;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.flex-parent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flex-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    position: relative;
+    min-height: 400px;
+}
+
+
+.payment_method {
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.radio {
+    display:inline-block;
+    width: 204;
+    height: 64;
+    border-radius: 0;
+    /* background: lightblue; */
+    box-sizing: border-box;
+    border: 2px solid lightgrey;
+    cursor:pointer;
+    margin: 8px 25px 8px 0px; 
+}
+
+.radio:hover {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.radio.selected {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+    background: #A0A0A0;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+#submit_button{
+    width: 10vw;
+    color: black;
+    background-color: #A0A0A0;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+.button #submit_button {
+    width: 10vw;
+    bottom: 0;
+    right: 0;
+}

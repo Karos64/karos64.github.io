@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head id="head">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adop(e)t</title>
+    <style></style>
+    <script type="text/javascript" src="../js/header_footer.js"></script>
+    <script type="text/javascript" src="../js/donate.js"></script>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/donate.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gentium-book-basic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana" />
+</head>
+
+<body id="body" onload="build_template();build_content()">
+    <main>
+        <h2 id="h2">Chcesz pomóc zwierzakom? Wspomóż wybrane schronisko!</h2>
+
+        <div class="flex-parent">
+            <div class="flex-child">
+                <form id="data_form">
+                    <label>Lista schronisk:
+                        <select name="schronisko" id="schronisko" class="dropdown-select">
+                            <option value="" disabled selected>Schronisko</option>
+                            <option value="dog_no_home">DogNoHome Kraków</option>
+                            <option value="psia_lapa">Schronikso Psia Łapa</option>
+                            <option value="pomagamy">Pomagamy pieskom</option>
+                        </select>
+                    </label>
+                    <label>Kwota donacji:
+                        <input type="text" placeholder="Kwota (PLN)" required>
+                    </label>
+                    <label>Imię: (opcjonalne)
+                        <input type="text" placeholder="Imię">
+                    </label>
+                    <label>Nazwisko: (opcjonalne)
+                        <input type="text" placeholder="Nazwisko">
+                    </label>
+                </form>
+            </div>
+
+            <div class="flex-child radio-group">
+                <div class='radio selected' data-value="credit"><img src="../imgs/visa_mastercard.jpg" width="200px"
+                        height="60px"></div>
+                <div class='radio' data-value="paypal"><img src="../imgs/przelewy24-logo.png" width="200px"
+                        height="60px">
+                </div>
+                <div class='radio' data-value="paypal"><img src="../imgs/przelewy24-logo.png" width="200px"
+                        height="60px">
+                </div>
+                <div class='radio' data-value="paypal"><img src="../imgs/przelewy24-logo.png" width="200px"
+                        height="60px">
+                </div>
+                <div class='radio' data-value="paypal"><img src="../imgs/przelewy24-logo.png" width="200px"
+                        height="60px">
+                </div>
+                <div class='radio' data-value="paypal"><img src="../imgs/przelewy24-logo.png" width="200px"
+                        height="60px">
+                </div>
+                <div class='radio' data-value="paypal"><img src="../imgs/przelewy24-logo.png" width="200px"
+                        height="60px">
+                </div>
+                <div class='radio' data-value="paypal"><img src="../imgs/przelewy24-logo.png" width="200px"
+                        height="60px">
+                </div>
+                <div class='radio' data-value="paypal"><img src="../imgs/przelewy24-logo.png" width="200px"
+                        height="60px">
+                </div>
+                <br>
+            </div>
+        </div>
+        <!-- <div class="payment_selection">
+            <div class="payment_method">GPay</div>
+            <div class="payment_method">ApplePay</div>
+            <div class="payment_method">SamsungPay</div>
+            <div class="payment_method">Przelewy24</div>
+            <div class="payment_method">PKO</div>
+            <div class="payment_method">ING</div>
+            <div class="payment_method">Millenium</div>
+            <div class="payment_method">mBank</div>
+            <div class="payment_method">Przelew bankowy</div>
+            </div> -->
+        <div class="button">
+            <a href="register_shelter.html">
+                <input type="button" id="submit_button" value="Przejdź do płatności">
+            </a>
+        </div>
+
+    </main>
+</body>
+
+</html>
