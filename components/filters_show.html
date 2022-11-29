@@ -43,16 +43,26 @@
                 <option value="lublin">Lublin</option>
                 <option value="bialystok">Białystok</option>
                 <option value="kielce">Kielce</option>
-                <option value="bielsko">Bielsko-biała</option>
+                <option value="bielsko">Bielsko-Biała</option>
                 <option value="sosnowiec">Sosnowiec</option>
                 <option value="katowice">Katowice</option>
             </select>
         </div>
 
         <div class="one_select">
+            <label for="schronisko">Schronisko</label>
+            <select name="schronisko" id="schronisko" class="dropdown-select">
+                <option value="" disabled selected>Wybierz konkretne schronisko...</option>
+                <option value="dog_no_home">DogNoHome Kraków</option>
+                <option value="psia_lapa">Schronikso Psia Łapa</option>
+                <option value="pomagamy">Pomagamy pieskom</option>
+            </select>
+        </div>
+
+        <div class="one_select">
             <label for="typ">Zwierzę: </label>
             <select name="typ" id="typ" class="dropdown-select">
-                <option value="" disabled selected>Wybierz jakiego zwirzęcia szukasz...</option>
+                <option value="" disabled selected>Wybierz jakiego zwierzęcia szukasz...</option>
                 <option value="pies">Pies</option>
                 <option value="kot">Kot</option>
                 <option value="papuga">Papuga</option>
@@ -60,7 +70,6 @@
                 <option value="swinka_morska">Świnka Morska</option>
                 <option value="swinka">Świnka</option>
                 <option value="mysz">Myszka</option>
-                <option value="waz">Wąż</option>
                 <option value="waz">Wąż</option>
             </select>
         </div>
@@ -111,11 +120,10 @@
                 <option value="" disabled selected>Wybierz wiek...</option>
                 <option value="0-1"><1</option>
                 <option value="1-2">1-2</option>
-                <option value="3-4">3-4</option>
-                <option value="4-5">4-5</option>
-                <option value="5-10">5-10</option>
-                <option value="10-15">10-15</option>
-                <option value="15-">15</option>
+                <option value="3-5">3-5</option>
+                <option value="6-10">6-10</option>
+                <option value="11-15">11-15</option>
+                <option value="15-">15></option>
             </select>
         </div>
 
@@ -128,15 +136,7 @@
             </select>
         </div>
 
-        <div class="one_select">
-            <label for="schronisko">Schronisko</label>
-            <select name="schronisko" id="schronisko" class="dropdown-select">
-                <option value="" disabled selected>Wybierz konkretne schronisko...</option>
-                <option value="dog_no_home">DogNoHome Kraków</option>
-                <option value="psia_lapa">Schronikso Psia Łapa</option>
-                <option value="pomagamy">Pomagamy pieskom</option>
-            </select>
-        </div>
+
     </div>
     <br>
     <span><b> Dodatkowe opcje: </b></span>
