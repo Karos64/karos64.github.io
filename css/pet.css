@@ -35,15 +35,17 @@ main {
     justify-content: space-around;
     align-items: flex-start;
     margin: 0 10rem;
+    height: 40vh;
 }
 
 .dog-img {
     position: relative;
     width: 50%;
+    height: 90%;
 }
 
 .dog-img img {
-    height: 45vh;
+    height: 100%
 }
 
 .dog-name {
