@@ -56,7 +56,15 @@ const build_content = () => {
                     animal_json.push({
                         'id': i,
                         'title': json['title'],
-                        'img': `../imgs/dog${i}.jpg`
+                        'img': `../imgs/dog${i}.jpg`,
+                        'description': json['description'],
+                        'gender': json['gender'],
+                        'weight': json['weight'],
+                        'age': json['age'], // this is outdated
+                        'pedigree': json['pedigree'],
+                        'breed': json['breed'],
+                        'shelter': json['shelter'],
+                        'tags': json['tags']
                     })
                 })
         )
@@ -65,9 +73,58 @@ const build_content = () => {
     // wait for all of them to load
     Promise.all(fetches).then(() => {
         let parsed_data = JSON.parse(JSON.stringify(animal_json))
+        document.querySelector('#main_blocks').innerHTML = ""
         for (let elem in parsed_data) {
-            createElement(parsed_data[elem]);
+            if (check_if_meets_requirements(parsed_data[elem])){
+                createElement(parsed_data[elem]);
+            }
         }
     })
 }
 
+function get_option_value(id){
+    const wrapper = document.getElementById(id)
+    if (wrapper == undefined) return undefined;
+
+    const wrapper_options = document.getElementById(id).options
+    return wrapper_options[wrapper_options.selectedIndex].value
+}
+
+function check_if_meets_requirements(parsed_elem){
+    if (get_option_value('plec') === undefined) return true;
+
+    if (get_option_value('miasto') !== "") {
+        if (parsed_elem['shelter'].includes(get_option_value('miasto')) === false) return false;
+    }
+    if(get_option_value('schronisko') !== ""){
+        if (parsed_elem['shelter'] !== get_option_value('schronisko')) return false;
+    }
+    if(get_option_value('typ') !== ""){
+        if (parsed_elem['typ'] !== get_option_value('typ')) return false;
+    }
+    if (get_option_value('plec') !== ""){
+        if (parsed_elem['gender'] !== get_option_value('plec')) return false;
+    }
+    if (get_option_value('wiek') !== "") {
+        let parsed_age = parseInt(parsed_elem['age'].split(" ")[0])
+        let option_range_1 = parseInt(get_option_value('wiek').split("-")[0])
+        let option_range_2 = parseInt(get_option_value('wiek').split("-")[1])
+        if (parsed_age < option_range_1 || parsed_age > option_range_2) return false;
+    }
+    if (get_option_value('rodowod') !== "") {
+        if (parsed_elem['pedigree'] !== get_option_value('rodowod')) return false;
+    }
+
+    let tags = document.getElementsByClassName('checkbox')
+    let parsed_tags = parsed_elem['tags']
+
+    for (let tag of tags){
+        if (tag.checked){
+            if (parsed_tags.includes(tag.value) == false) return false;
+        }
+    }
+
+
+    return true;
+
+}
