@@ -23,9 +23,9 @@
     <div class="search">
         <form id="search_form">
             <div id="search_input">
-                <input type="text" name="search_input" id="search_input_text" placeholder="Wyszukaj...">
-                <button type="submit" name="search_button" id="search_button">
-                    <i class="gg-search"></i>
+                <input type="text" name="search_input" id="search_input_text" placeholder="Wyszukaj po imieniu" onkeydown="build_content()">
+                <button type="button" name="search_button" id="search_button" onclick="build_content()">
+                    <i class="gg-search" id="search_field"></i>
                 </button>
             </div>
         </form>
