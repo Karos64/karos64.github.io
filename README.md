@@ -11,7 +11,7 @@ dobra materialne lub wpłacając środki pieniężne oraz zasięgnąć porady u 
 zwierzęcych specjalistów. 
 
 #### Autorzy
-- Seweryn Jarco
 - Karolina Kosowska
+- Seweryn Jarco
 - Arkadiusz Janus
 - Jonasz Gawlik
