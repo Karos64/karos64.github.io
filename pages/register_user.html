@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adop(e)t</title>
     <style></style>
-    <script type="text/javascript"  src="../js/header_footer.js"></script>
+    <script type="text/javascript" src="../js/header_footer.js"></script>
     <script type="text/javascript" src="../js/success.js"></script>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/register_forms.css">
@@ -17,21 +17,20 @@
 </head>
 <body id="body" onload="build_template()">
 <main class="main3">
-    <div class="navigation">
-        <a href="cooperation.html">
-            <img class="backButton" alt="Wróć" src="../imgs/chevron-left-circle-svgrepo-com.svg">
-        </a>
-        <h2 class="h2_">Stwórz konto schroniska</h2>
-    </div>
+    <h2 class="h2_">Zarejestruj się</h2>
     <form class="register_form" onsubmit="return successful_register(event)">
         <label for="email">Adres email</label>
-        <input type="email" class="email" id="email" placeholder="Adres email" required><br>
+        <input type="email" id="email" placeholder="Adres email" required><br>
         <label for="password">Hasło</label>
-        <input type="password" class="password" id="password" placeholder="Hasło" required><br>
-        <label for="password2">Powtórz hasło</label>
-        <input type="password" class="password2" id="password2" placeholder="Powtórz hasło" required><br>
+        <input type="password" id="password" placeholder="Hasło" required><br>
+        <label for="password">Powtórz hasło</label>
+        <input type="password" id="password2" placeholder="Powtórz hasło" required><br>
         <div class="button">
             <input type="submit" class="register_button" value="Zarejestruj">
+        </div>
+        <div class="account">
+            <span>Masz już konto? </span>
+            <a id="link" href="login.html">Zaloguj się</a>
         </div>
     </form>
 </main>
