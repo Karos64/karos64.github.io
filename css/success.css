@@ -1,0 +1,16 @@
+main {
+    flex: 1;
+}
+
+.success {
+    padding-top: 100px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 5vw;
+}
+
+.success a {
+    text-decoration: underline;
+}

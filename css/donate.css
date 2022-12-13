@@ -24,7 +24,7 @@ main {
 
 #data_form * {
     font-size: 25px;
-    color: black;
+    /*color: black;*/
     font-family: "Gentium Book Basic";
 } 
 
@@ -105,4 +105,12 @@ main {
     background-color: #A0A0A0;
     border-radius: 5px;
     border: 1px black solid;
+}
+
+select {
+    color: gray;
+}
+
+select option {
+    color: gray;
 }

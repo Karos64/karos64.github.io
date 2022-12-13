@@ -40,7 +40,7 @@ main {
 .register_form {
     width: 30vw;
     padding-bottom: 4vw;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -102,4 +102,104 @@ input {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+.account {
+    text-align: center;
+    width: 30vw;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+span {
+    font-size: 1vw;
+}
+#link, #link1, #link2 {
+    font-size: 1vw;
+    text-decoration: underline;
+}
+
+.one_checkbox input {
+    width: 0.8vw;
+    height: 0.8vw;
+}
+
+.one_checkbox label {
+    font-size: 1vw;
+}
+
+select {
+    height: 2.2vw;
+    width: 60.3vw;
+    font-size: 1vw;
+    color: gray;
+}
+
+select option {
+    color: gray;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+    .main1 {
+        position: relative;
+        min-height: 65vw;
+    }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+    .main1 {
+        position: relative;
+        min-height: 60vw;
+    }
+}
+
+@media only screen and (max-width: 1600px) and (min-width: 1401px) {
+    .main1 {
+        position: relative;
+        min-height: 55vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+    .main2 {
+        position: relative;
+        min-height: 55vw;
+    }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+    .main2 {
+        position: relative;
+        min-height: 50vw;
+    }
+}
+
+@media only screen and (max-width: 3000px) and (min-width: 1401px) {
+    .main2 {
+        position: relative;
+        min-height: 45vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+    .main3 {
+        position: relative;
+        min-height: 40vw;
+    }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+    .main3 {
+        position: relative;
+        min-height: 35vw;
+    }
+}
+
+@media only screen and (max-width: 3000px) and (min-width: 1401px) {
+    .main3 {
+        position: relative;
+        min-height: 30vw;
+    }
 }
