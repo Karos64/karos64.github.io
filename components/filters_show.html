@@ -7,22 +7,22 @@
     <div id="selects">
         <div class="one_select">
             <label for="miasto">Miasto</label>
-            <select name="miasto" id="miasto" class="dropdown-select" onchange="switch_shelters()">
-                <option value="" selected>Wybierz miasto...</option>
+            <select name="miasto" id="miasto" class="dropdown-select" onchange="manage_select(this);switch_shelters()">
+                <option value="" selected>Wybierz miasto</option>
             </select>
         </div>
 
         <div class="one_select">
             <label for="schronisko">Schronisko</label>
-            <select name="schronisko" id="schronisko" class="dropdown-select" disabled>
-                <option value="" selected>Wybierz konkretne schronisko...</option>
+            <select name="schronisko" id="schronisko" class="dropdown-select" disabled onchange="manage_select(this)">
+                <option value="" selected>Wybierz konkretne schronisko</option>
             </select>
         </div>
 
         <div class="one_select">
             <label for="typ">Zwierzę </label>
-            <select name="typ" id="typ" class="dropdown-select">
-                <option value="" selected>Wybierz jakiego zwierzęcia szukasz...</option>
+            <select name="typ" id="typ" class="dropdown-select" onchange="manage_select(this)">
+                <option value="" selected>Wybierz jakiego zwierzęcia szukasz</option>
                 <option value="pies">Pies</option>
                 <option value="kot">Kot</option>
                 <option value="papuga">Papuga</option>
@@ -36,8 +36,8 @@
 
         <div class="one_select">
             <label for="plec">Płeć</label>
-            <select name="plec" id="plec" class="dropdown-select">
-                <option value="" selected>Wybierz płeć...</option>
+            <select name="plec" id="plec" class="dropdown-select" onchange="manage_select(this)">
+                <option value="" selected>Wybierz płeć</option>
                 <option value="samiec">Samiec</option>
                 <option value="samica">Samica</option>
             </select>
@@ -45,8 +45,8 @@
 
         <div class="one_select">
             <label for="wiek">Wiek</label>
-            <select name="wiek" id="wiek" class="dropdown-select">
-                <option value="" selected>Wybierz wiek...</option>
+            <select name="wiek" id="wiek" class="dropdown-select" onchange="manage_select(this)">
+                <option value="" selected>Wybierz wiek</option>
                 <option value="0-1"><1</option>
                 <option value="1-2">1-2</option>
                 <option value="3-5">3-5</option>
@@ -58,7 +58,7 @@
 
         <div class="one_select">
             <label for="rodowod">Rodowód</label>
-            <select name="rodowod" id="rodowod" class="dropdown-select">
+            <select name="rodowod" id="rodowod" class="dropdown-select" onchange="manage_select(this)">
                 <option value="" selected>Czy musi posiadać rodowód?</option>
                 <option value="tak">Tak</option>
                 <option value="nie">Nie</option>

@@ -35,7 +35,7 @@ const localizations = {
 function create_options(list, text){
     let string = "";
     let index = 0;
-    string += `<option value="" selected>Wybierz ${text}...</option>`
+    string += `<option value="" selected>Wybierz ${text}</option>`
     list.forEach(element => {
         string += `<option value="${element}">${element}</option>`;
 
