@@ -16,9 +16,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="body" onload="build_template()">
-<main class="main3">
+<main class="main4">
     <h2 class="h2_">Zarejestruj się</h2>
-    <form class="register_form" onsubmit="return successful_register(event)">
+    <form class="data_form" onsubmit="return successful_register(event)">
+        <label>Imię</label>
+        <input type="text" id="name" placeholder="Imię" required><br>
+        <label>Nazwisko</label>
+        <input type="text" id="surname" placeholder="Nazwisko" required><br>
+        <label>Data urodzenia</label>
+        <input type="date" id="date" placeholder="Data urodzenia" required><br>
+        <div class="address">
+            <div class="street">
+                <label>Ulica</label>
+                <input type="text" id="street" placeholder="Ulica" required>
+            </div>
+            <div class="number">
+                <label>Numer</label>
+                <input type="text" id="street-nr" placeholder="Numer" required>
+            </div>
+            <div class="zip_code">
+                <label>Kod pocztowy</label>
+                <input type="text" id="zip-code" placeholder="Kod pocztowy" required>
+            </div>
+            <div class="city">
+                <label>Miasto</label>
+                <input type="text" id="city" placeholder="Miasto" required>
+            </div>
+        </div>
+        <br>
         <label for="email">Adres email</label>
         <input type="email" id="email" placeholder="Adres email" required><br>
         <label for="password">Hasło</label>
