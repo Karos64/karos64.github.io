@@ -10,9 +10,15 @@ function successful_register(e) {
     return false;
 }
 
-function successful_adoption(e) {
+function successful_adoption(e) { // tej użyj po zatwierdzeniu kalendarza jeśli użytkownik jest zalogowany
     e.preventDefault();
     location.href="../pages/successful_adoption.html"
+    return false;
+}
+
+function back_to_login(e) { // tej użyj po zatwierdzeniu kalendarza jeśli użytkownik jest niezalogowany
+    e.preventDefault();
+    location.href="../pages/login_adopt.html"
     return false;
 }
 

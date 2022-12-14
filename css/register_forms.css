@@ -144,35 +144,65 @@ select option {
 @media only screen and (max-width: 1200px) and (min-width: 1000px) {
     .main1 {
         position: relative;
-        min-height: 65vw;
+        min-height: 80vw;
+    }
+
+    .main2 {
+        position: relative;
+        min-height: 55vw;
+    }
+
+    .main3 {
+        position: relative;
+        min-height: 40vw;
+    }
+
+    .main4 {
+        position: relative;
+        min-height: 60vw;
     }
 }
 
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
     .main1 {
         position: relative;
-        min-height: 60vw;
+        min-height: 75vw;
+    }
+
+    .main2 {
+        position: relative;
+        min-height: 50vw;
+    }
+
+    .main3 {
+        position: relative;
+        min-height: 35vw;
+    }
+
+    .main4 {
+        position: relative;
+        min-height: 55vw;
     }
 }
 
 @media only screen and (max-width: 1600px) and (min-width: 1401px) {
     .main1 {
         position: relative;
-        min-height: 55vw;
+        min-height: 70vw;
     }
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 1000px) {
-    .main2 {
+@media only screen and (max-width: 2000px) and (min-width: 1601px) {
+    .main1 {
         position: relative;
-        min-height: 55vw;
+        min-height: 65vw;
     }
 }
 
-@media only screen and (max-width: 1400px) and (min-width: 1201px) {
-    .main2 {
+@media only screen and (max-width: 3000px) and (min-width: 2001px) {
+    .main1 {
         position: relative;
-        min-height: 50vw;
+        min-height: 60vw;
     }
 }
 
@@ -181,25 +211,14 @@ select option {
         position: relative;
         min-height: 45vw;
     }
-}
 
-@media only screen and (max-width: 1200px) and (min-width: 1000px) {
-    .main3 {
-        position: relative;
-        min-height: 40vw;
-    }
-}
-
-@media only screen and (max-width: 1400px) and (min-width: 1201px) {
-    .main3 {
-        position: relative;
-        min-height: 35vw;
-    }
-}
-
-@media only screen and (max-width: 3000px) and (min-width: 1401px) {
     .main3 {
         position: relative;
         min-height: 30vw;
+    }
+
+    .main4 {
+        position: relative;
+        min-height: 50vw;
     }
 }

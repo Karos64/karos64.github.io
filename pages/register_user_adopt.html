@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adop(e)t</title>
+  <style></style>
+  <script type="text/javascript" src="../js/header_footer.js"></script>
+  <script type="text/javascript" src="../js/success.js"></script>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/register_forms.css">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gentium-book-basic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="body" onload="build_template()">
+<main class="main4">
+  <h2 class="h2_">Zarejestruj się</h2>
+  <form class="data_form" onsubmit="return back_to_login(event)">
+    <label>Imię</label>
+    <input type="text" id="name" placeholder="Imię" required><br>
+    <label>Nazwisko</label>
+    <input type="text" id="surname" placeholder="Nazwisko" required><br>
+    <label>Data urodzenia</label>
+    <input type="date" id="date" placeholder="Data urodzenia" required><br>
+    <div class="address">
+      <div class="street">
+        <label>Ulica</label>
+        <input type="text" id="street" placeholder="Ulica" required>
+      </div>
+      <div class="number">
+        <label>Numer</label>
+        <input type="text" id="street-nr" placeholder="Numer" required>
+      </div>
+      <div class="zip_code">
+        <label>Kod pocztowy</label>
+        <input type="text" id="zip-code" placeholder="Kod pocztowy" required>
+      </div>
+      <div class="city">
+        <label>Miasto</label>
+        <input type="text" id="city" placeholder="Miasto" required>
+      </div>
+    </div>
+    <br>
+    <label for="email">Adres email</label>
+    <input type="email" id="email" placeholder="Adres email" required><br>
+    <label for="password">Hasło</label>
+    <input type="password" id="password" placeholder="Hasło" required><br>
+    <label for="password">Powtórz hasło</label>
+    <input type="password" id="password2" placeholder="Powtórz hasło" required><br>
+    <div class="button">
+      <input type="submit" class="register_button" value="Zarejestruj">
+    </div>
+    <div class="account">
+      <span>Masz już konto? </span>
+      <a id="link" href="login.html">Zaloguj się</a>
+    </div>
+  </form>
+</main>
+</body>
+</html>

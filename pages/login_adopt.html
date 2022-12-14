@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adop(e)t</title>
+  <style></style>
+  <script type="text/javascript" src="../js/header_footer.js"></script>
+  <script type="text/javascript" src="../js/success.js"></script>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/register_forms.css">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gentium-book-basic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="body" onload="build_template()">
+<main class="main3">
+  <h2 class="h2_">Aby ukończyć proces adopcji musisz się zalogować</h2>
+  <form class="register_form" onsubmit="return successful_adoption(event)">
+    <label for="email">Adres email</label>
+    <input type="email" class="email" id="email" placeholder="Adres email" required><br>
+    <label for="password">Hasło</label>
+    <input type="password" class="password" id="password" placeholder="Hasło" required><br>
+    <div class="button">
+      <input type="submit" class="register_button" value="Zaloguj">
+    </div>
+    <div class="account">
+      <span>Nie masz jeszcze konta? </span>
+      <a id="link1" href="register_user_adopt.html">Zarejestruj się</a>
+    </div>
+  </form>
+</main>
+</body>
+</html>
