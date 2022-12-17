@@ -28,11 +28,11 @@
             </div>
             <div class="number">
                 <label>Numer</label>
-                <input type="text" id="street-nr" placeholder="Numer" required>
+                <input type="number" id="street-nr" placeholder="Numer" required>
             </div>
             <div class="zip_code">
                 <label>Kod pocztowy</label>
-                <input type="text" id="zip-code" placeholder="Kod pocztowy" required>
+                <input type="zip" id="zip-code" pattern="[0-9]{2}-[0-9]{3}" placeholder="Kod pocztowy" required>
             </div>
             <div class="city">
                 <label>Miasto</label>
@@ -41,13 +41,13 @@
         </div>
         <br>
         <label>NIP</label>
-        <input type="text" id="nip" placeholder="NIP" required><br>
+        <input type="text" id="nip" placeholder="NIP" maxlength="10" minlength="10" pattern="[0-9]{10}" required><br>
         <label>REGON</label>
-        <input type="text" id="regon" placeholder="REGON" required><br>
+        <input type="text" id="regon" placeholder="REGON" maxlength="9" minlength="9" pattern="[0-9]{9}" required><br>
         <label>KRS</label>
-        <input type="text" id="krs" placeholder="KRS"><br>
+        <input type="text" id="krs" placeholder="KRS" maxlength="10" minlength="10" pattern="[0-9]{10}"><br>
         <label>Numer konta bankowego</label>
-        <input type="text" id="bank" placeholder="Numer konta bankowego" required><br>
+        <input type="text" id="bank" placeholder="Numer konta bankowego" maxlength="26" minlength="26" pattern="[0-9]{26}" required><br>
         <div class="button">
             <input type="submit" class="submit_button" value="Zatwierdź">
         </div>

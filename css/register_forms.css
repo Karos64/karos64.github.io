@@ -145,10 +145,14 @@ select option {
     display: None;
 }
 
+#not_identical {
+    display: None;
+}
+
 @media only screen and (max-width: 1200px) and (min-width: 1000px) {
     .main1 {
         position: relative;
-        min-height: 80vw;
+        min-height: 85vw;
     }
 
     .main2 {
@@ -170,7 +174,7 @@ select option {
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
     .main1 {
         position: relative;
-        min-height: 75vw;
+        min-height: 80vw;
     }
 
     .main2 {
@@ -192,21 +196,21 @@ select option {
 @media only screen and (max-width: 1600px) and (min-width: 1401px) {
     .main1 {
         position: relative;
-        min-height: 70vw;
+        min-height: 75vw;
     }
 }
 
 @media only screen and (max-width: 2000px) and (min-width: 1601px) {
     .main1 {
         position: relative;
-        min-height: 65vw;
+        min-height: 70vw;
     }
 }
 
 @media only screen and (max-width: 3000px) and (min-width: 2001px) {
     .main1 {
         position: relative;
-        min-height: 60vw;
+        min-height: 65vw;
     }
 }
 
@@ -218,7 +222,7 @@ select option {
 
     .main3 {
         position: relative;
-        min-height: 30vw;
+        min-height: 35vw;
     }
 
     .main4 {
