@@ -1,0 +1,15 @@
+{
+    "id": 3,
+    "name": "Ewelina",
+    "surname": "Ptak",
+    "date": "1998-07-01",
+    "street": "Kolejowa",
+    "street-nr": 3,
+    "zip-code": "60-123",
+    "city": "Poznań",
+    "email": "ewelina1.ptak@gmail.com",
+    "pasword": "ptaszek123",
+    "active": [],
+    "inactive": [],
+    "adopted": []
+}

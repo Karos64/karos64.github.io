@@ -1,0 +1,17 @@
+{
+    "id": 3,
+    "name": "Pomagamy pieskom",
+    "street": "Losowa",
+    "street-nr": 70,
+    "zip-code": "70-445",
+    "city": "Łódź",
+    "NIP": 7643356290,
+    "REGON": 698062182,
+    "KRS": 1762248925,
+    "bank": 94323086567878958572614588,
+    "email": "pomagamy.pieskom@gmail.com",
+    "password": "kochamypieski98765",
+    "active": [20, 21],
+    "inactive": [],
+    "adopted": []
+   }

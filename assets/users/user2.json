@@ -1,0 +1,15 @@
+{
+    "id": 2,
+    "name": "Andrzej",
+    "surname": "Mruk",
+    "date": "1992-01-01",
+    "street": "Polana",
+    "street-nr": 1,
+    "zip-code": "00-001",
+    "city": "Warszawa",
+    "email": "andrzejmruk@gmail.com",
+    "password": "123",
+    "active": [7, 8],
+    "inactive": [],
+    "adopted": []
+}

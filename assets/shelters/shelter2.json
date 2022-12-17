@@ -1,0 +1,17 @@
+{
+    "id": 2,
+    "name": "Schronisko Psia Łapa",
+    "street": "Fistaszkowa",
+    "street-nr": 39,
+    "zip-code": "00-006",
+    "city": "Warszawa",
+    "NIP": 5489566544,
+    "REGON": 466960725,
+    "KRS": 8902662164,
+    "bank": 71350475236809399409018310,
+    "email": "schronisko.psia.lapa@gmail.com",
+    "password": "dogfeetlovers111",
+    "active": [14, 15],
+    "inactive": [16, 17, 18],
+    "adopted": []
+   }
