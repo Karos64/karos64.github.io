@@ -22,11 +22,12 @@
     <main>
         <h2 id="h2">Chcesz pomóc zwierzakom? Wspomóż wybrane schronisko!</h2>
 
-        <div class="flex-parent">
+        <div class="flex-parent" onsubmit="return successful_donation(event)">
             <div class="flex-child">
                 <form id="data_form">
                     <label>Lista schronisk
-                        <select name="schronisko" id="schronisko" class="dropdown-select" onchange="manage_select(this)" required>
+                        <select name="schronisko" id="schronisko" class="dropdown-select" onchange="manage_select(this)"
+                            required>
                             <option value="" disabled selected>Wybierz schronisko</option>
                             <option value="dog_no_home">DogNoHome Kraków</option>
                             <option value="psia_lapa">Schronisko Psia Łapa</option>
@@ -67,10 +68,9 @@
                 <br>
             </div>
         </div>
+
         <div class="button">
-            <a href="payment_page.html">
-                <input type="button" id="submit_button" value="Przejdź do płatności">
-            </a>
+            <input type="submit" id="submit_button" value="Przejdź do płatności" form="data_form">
         </div>
 
     </main>
