@@ -17,8 +17,8 @@
 </head>
 <body id="body" onload="build_template()">
 <main class="main3">
-  <h2 class="h2_">Aby ukończyć proces adopcji, musisz się zalogować</h2>
-  <form class="register_form" onsubmit="return successful_adoption(event)">
+  <h2 class="h2_">Aby oddać zwierzę do adopcji, musisz się zalogować</h2>
+  <form class="register_form" onsubmit="return successful_login_give(event)">
     <span id="wrong" style="text-align: center; color: red">Nieprawidłowy email lub hasło</span><br>
     <label for="email">Adres email</label>
     <input type="email" class="email" id="email" placeholder="Adres email" required><br>
@@ -29,7 +29,7 @@
     </div>
     <div class="account">
       <span>Nie masz jeszcze konta? </span>
-      <a id="link1" href="register_user_adopt.html">Zarejestruj się</a>
+      <a id="link1" href="register_user_give.html">Zarejestruj się</a>
     </div>
   </form>
 </main>
