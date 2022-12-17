@@ -23,19 +23,22 @@ main {
 }
 
 #data_form * {
-    font-size: 25px;
-    /*color: black;*/
-    font-family: "Gentium Book Basic";
-} 
+}
 
 #data_form label {
-    font-size: 1.2vw;
-    font-weight: bold;
+    font-size: 20px;
     margin-bottom: 3vw;
     display: flex;
     flex-direction: column;
     width: 300px;
 }
+
+#data_form input, select {
+    font-size: 1vw;
+    height: 2.2vw;
+
+}
+
 
 .flex-parent {
     display: flex;
@@ -67,8 +70,8 @@ main {
 
 .radio {
     display:inline-block;
-    width: 204px;
-    height: 85px;
+    width: 12vmax;
+    height: 5vmax;
     border-radius: 5px;
     background: rgb(240, 240, 240);
     box-sizing: border-box;
@@ -114,3 +117,10 @@ select {
 select option {
     color: gray;
 }
+
+@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+.button {
+    margin-bottom: 3vw;
+}
+}
+
