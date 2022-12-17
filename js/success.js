@@ -1,12 +1,27 @@
 function successful_give(e) {
     e.preventDefault();
-    location.href = "../pages/successful_give.html"
+    location.href = "../pages/successful_give.html";
     return false;
+}
+
+function create_link() {
+    // const id = id pliku
+    const new_link = document.getElementById("new_link");
+    new_link.href = "../pages/pet.html?id="`${length}`;
 }
 
 function successful_register(e) {
     e.preventDefault();
-    location.href = "../pages/successful_register.html"
+    const password1 = document.getElementById("password");
+    const password2 = document.getElementById("password2");
+    const not_identical = document.getElementById("not_identical");
+    if(password1.value !== password2.value) {
+        not_identical.style.display = "block";
+        password1.value = "";
+        password2.value = "";
+    } else {
+        location.href = "../pages/successful_register.html"
+    }
     return false;
 }
 
@@ -60,13 +75,31 @@ function successful_login_give(e) { // przekierowanie do "Oddaj" jeśli był nie
 
 function back_to_login(e) { // tej użyj po zatwierdzeniu kalendarza jeśli użytkownik jest niezalogowany
     e.preventDefault();
-    location.href = "../pages/login_adopt.html"
+    const password1 = document.getElementById("password");
+    const password2 = document.getElementById("password2");
+    const not_identical = document.getElementById("not_identical");
+    if(password1.value !== password2.value) {
+        not_identical.style.display = "block";
+        password1.value = "";
+        password2.value = "";
+    } else {
+        location.href = "../pages/login_adopt.html"
+    }
     return false;
 }
 
 function back_to_login_give(e) {
     e.preventDefault();
-    location.href = "../pages/give_not_logged.html"
+    const password1 = document.getElementById("password");
+    const password2 = document.getElementById("password2");
+    const not_identical = document.getElementById("not_identical");
+    if(password1.value !== password2.value) {
+        not_identical.style.display = "block";
+        password1.value = "";
+        password2.value = "";
+    } else {
+        location.href = "../pages/give_not_logged.html"
+    }
     return false;
 }
 
