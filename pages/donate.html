@@ -22,24 +22,25 @@
     <main>
         <h2 id="h2">Chcesz pomóc zwierzakom? Wspomóż wybrane schronisko!</h2>
 
-        <div class="flex-parent">
+        <div class="flex-parent" onsubmit="return successful_donation(event)">
             <div class="flex-child">
                 <form id="data_form">
-                    <label>Lista schronisk:
-                        <select name="schronisko" id="schronisko" class="dropdown-select" onchange="manage_select(this)" required>
+                    <label>Lista schronisk
+                        <select name="schronisko" id="schronisko" class="dropdown-select" onchange="manage_select(this)"
+                            required>
                             <option value="" disabled selected>Wybierz schronisko</option>
                             <option value="dog_no_home">DogNoHome Kraków</option>
                             <option value="psia_lapa">Schronisko Psia Łapa</option>
                             <option value="pomagamy">Pomagamy pieskom</option>
                         </select>
                     </label>
-                    <label>Kwota donacji:
-                        <input type="text" placeholder="Kwota (PLN)" required>
+                    <label>Kwota donacji
+                        <input type="number" step="0.1" placeholder="Kwota (PLN)" required>
                     </label>
-                    <label>Imię: (opcjonalne)
+                    <label>Imię (opcjonalne)
                         <input type="text" placeholder="Imię">
                     </label>
-                    <label>Nazwisko: (opcjonalne)
+                    <label>Nazwisko (opcjonalne)
                         <input type="text" placeholder="Nazwisko">
                     </label>
                 </form>
@@ -67,10 +68,9 @@
                 <br>
             </div>
         </div>
+
         <div class="button">
-            <a href="payment_page.html">
-                <input type="button" id="submit_button" value="Przejdź do płatności">
-            </a>
+            <input type="submit" id="submit_button" value="Przejdź do płatności" form="data_form">
         </div>
 
     </main>

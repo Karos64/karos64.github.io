@@ -72,7 +72,7 @@ function back_to_login_give(e) {
 
 function successful_donation(e) {
     e.preventDefault();
-    location.href = "../pages/successful_donation.html"
+    location.href = "../pages/payment_page.html"
     return false;
 }
 

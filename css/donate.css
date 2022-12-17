@@ -23,19 +23,17 @@ main {
 }
 
 #data_form * {
-    font-size: 25px;
-    /*color: black;*/
-    font-family: "Gentium Book Basic";
+    height: 3vw;
 } 
 
 #data_form label {
-    font-size: 1.2vw;
-    font-weight: bold;
+    font-size: 1vw;
     margin-bottom: 3vw;
     display: flex;
     flex-direction: column;
     width: 300px;
 }
+
 
 .flex-parent {
     display: flex;
@@ -67,8 +65,8 @@ main {
 
 .radio {
     display:inline-block;
-    width: 204px;
-    height: 85px;
+    width: 12vmax;
+    height: 5vmax;
     border-radius: 5px;
     background: rgb(240, 240, 240);
     box-sizing: border-box;
