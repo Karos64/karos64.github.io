@@ -1,6 +1,58 @@
+
+function get_parameters(){
+    const name = document.getElementById('name').value
+    const pet = document.getElementById('pet').value
+    const gender = document.getElementById('gender').value
+    const age = document.getElementById('age').value
+    const pedigree = document.getElementById('pedigree').value
+    const description = document.getElementById('description').value
+    let tags = []
+    if (document.getElementById('spacery').checked){
+        tags.push(document.getElementById('spacery').value)
+    }
+    if (document.getElementById('szczepienia').checked){
+        tags.push(document.getElementById('szczepienia').value)
+    }
+    if (document.getElementById('zabawa').checked){
+        tags.push(document.getElementById('zabawa').value)
+    }
+    if (document.getElementById('samotnosc').checked){
+        tags.push(document.getElementById('samotnosc').value)
+    }
+    if (document.getElementById('przyjazny').checked){
+        tags.push(document.getElementById('przyjazny').value)
+    }
+    if (document.getElementById('szkolony').checked){
+        tags.push(document.getElementById('szkolony').value)
+    }
+    if (document.getElementById('akceptuje_zwierzeta').checked){
+        tags.push(document.getElementById('akceptuje_zwierzeta').value)
+    }
+
+    let pet_json = {
+        "id": 1, // musi zliczać ile plików już jest i +1
+        "title": name,
+        "typ": pet,
+        "img": "../imgs/img1.jpg", // huh pewnie że mamy dodawnie pliku
+        "description": description,
+        "gender": gender,
+        "age": age,
+        "pedigree": pedigree,
+        "owner": "", // to wszystko co jest "" jest zbierane z LocalStorage, kto to jest
+        "shelter": "",
+        "city": "",
+        "user": "",
+        "email": "",
+        "number": "",
+        "tags": tags
+    }
+    return pet_json
+}
+
 function successful_give(e) {
     e.preventDefault();
-    location.href = "../pages/successful_give.html";
+    const pet_json = get_parameters() // tutaj będzie dodawanie do Local Storage
+    location.href = "../pages/successful_give.html"
     return false;
 }
 

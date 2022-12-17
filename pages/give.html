@@ -20,9 +20,9 @@
     <h2 class="h2">Chcesz oddać zwierzę do adopcji? Wypełnij formularz</h2>
     <form class="data_form" onsubmit="return successful_give(event)">
         <label>Imię</label>
-        <input type="text" placeholder="Imię" required><br>
+        <input type="text" id="name" placeholder="Imię" required><br>
         <label>Zwierzę</label>
-        <select required onchange="manage_select(this)">
+        <select required onchange="manage_select(this)" id="pet">
             <option value="" selected disabled>Wybierz zwierzę</option>
             <option value="pies">Pies</option>
             <option value="kot">Kot</option>
@@ -34,13 +34,13 @@
             <option value="waz">Wąż</option>
         </select><br>
         <label>Płeć</label>
-        <select required onchange="manage_select(this)">
+        <select required onchange="manage_select(this)" id="gender">
             <option value="" selected disabled>Wybierz płeć</option>
             <option value="samiec">Samiec</option>
             <option value="samica">Samica</option>
         </select><br>
         <label>Wiek</label>
-        <select required onchange="manage_select(this)">
+        <select required onchange="manage_select(this)" id="age">
             <option value="" selected disabled>Wybierz wiek</option>
             <option value="0-1"><1</option>
             <option value="1-2">1-2</option>
@@ -50,14 +50,14 @@
             <option value="16-25">16-25</option>
         </select><br>
         <label>Rodowód</label>
-        <select required onchange="manage_select(this)">
+        <select required onchange="manage_select(this)" id="pedigree">
             <option value="" selected disabled>Czy posiada rodowód?</option>
             <option value="tak">Tak</option>
             <option value="nie">Nie</option>
         </select><br>
         <label>Opis</label>
         <textarea type="text" placeholder="Opowiedz nam więcej o swoim zwierzęciu" required
-                  style="height: 10vw; font-size: 1vw"></textarea><br>
+                  style="height: 10vw; font-size: 1vw" id="description"></textarea><br>
         <label>Zdjęcie</label>
         <input type="file" id="file_button" required><br>
         <label>Dodatkowe opcje:</label>
