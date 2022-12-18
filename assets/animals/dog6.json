@@ -1,15 +1,18 @@
 {
     "id": 6,
     "title": "Reksio",
-    "img": "../imgs/dog6.jpg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ex mattis, viverra nunc vitae, vestibulum nunc. In eu augue et urna maximus auctor sed in sapien. Morbi commodo, justo non lobortis fringilla, lacus ex tristique dui, ac laoreet est ex vel nisi. Donec dapibus dictum sapien a pretium. Nulla quis tristique neque. Aenean in lorem nec lacus mollis maximus nec sit amet erat. Phasellus in suscipit lacus, non scelerisque dolor. Aliquam erat volutpat. Sed massa sapien, commodo scelerisque dapibus ac, imperdiet malesuada lacus. Morbi sollicitudin sem arcu, vestibulum porttitor felis accumsan ut. Etiam sodales sodales sapien sagittis vehicula. Integer aliquam risus et ante consectetur, et iaculis ante consectetur. Nullam aliquam dui id ipsum tincidunt semper.",
+    "typ": "pies",
+    "img": "../imgs/animals/dogs/dog6.jpg",
+    "description": "opis jakis fajny",
     "gender": "samiec",
-    "weight": 23,
-    "height": 61,
-    "age": "5 lat",
-    "pedigree": "tak",
-    "breed": "mieszana",
-    "shelter": "Get-A-Pet - Maślana 2, 72-122 Bydgoszcz",
+    "age": "1 rok",
+    "pedigree": "nie",
+    "owner": "user", 
+    "shelter": "",
+    "city": "Kraków",
+    "user": "Jan Kowalski",
+    "email": "jankowalski@gmail.com",
+    "number": "123456789",
     "tags": [
         "Akceptuje inne zwierzęta",
         "Szkolony",
@@ -17,5 +20,6 @@
         "Źle znosi samotność",
         "Przyjazny dzieciom",
         "Lubi spacery"
-    ]
+    ],
+    "active": true
 }

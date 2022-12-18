@@ -1,19 +1,23 @@
 {
     "id": 11,
     "title": "Łajka",
-    "img": "../imgs/dog11.jpg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ex mattis, viverra nunc vitae, vestibulum nunc. In eu augue et urna maximus auctor sed in sapien. Morbi commodo, justo non lobortis fringilla, lacus ex tristique dui, ac laoreet est ex vel nisi. Donec dapibus dictum sapien a pretium. Nulla quis tristique neque. Aenean in lorem nec lacus mollis maximus nec sit amet erat. Phasellus in suscipit lacus, non scelerisque dolor. Aliquam erat volutpat. Sed massa sapien, commodo scelerisque dapibus ac, imperdiet malesuada lacus. Morbi sollicitudin sem arcu, vestibulum porttitor felis accumsan ut. Etiam sodales sodales sapien sagittis vehicula. Integer aliquam risus et ante consectetur, et iaculis ante consectetur. Nullam aliquam dui id ipsum tincidunt semper.",
+    "typ": "pies",
+    "img": "../imgs/animals/dogs/dog11.jpg",
+    "description": "opis jakis fajny",
     "gender": "samica",
-    "weight": 21,
-    "height": 52,
-    "age": "2 lata",
+    "age": "5 lat",
     "pedigree": "nie",
-    "breed": "mieszana",
-    "shelter": "DoggyHome - Szaflarska 99, 40-000 Katowice",
+    "owner": "user", 
+    "shelter": "",
+    "city": "Kraków",
+    "user": "Jan Kowalski",
+    "email": "jankowalski@gmail.com",
+    "number": "123456789",
     "tags": [
         "Lubi spacery",
         "Szczepienia",
         "Szkolony",
         "Źle znosi samotność"
-    ]
+    ],
+    "active": true
 }

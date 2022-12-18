@@ -77,7 +77,7 @@ function load_default_animals() {
                     animal_json.push({
                         'id': i,
                         'title': json['title'],
-                        'img': `../imgs/dog${i}.jpg`,
+                        'img': `../imgs/animals/dogs/dog${i}.jpg`,
                         'description': json['description'],
                         'gender': json['gender'],
                         'weight': json['weight'],
