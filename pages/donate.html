@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana" />
 </head>
 
-<body id="body" onload="build_template();build_content()">
+<body id="body" onload="build_template()">
     <main>
         <h2 id="h2">Chcesz pomóc zwierzakom? Wspomóż wybrane schronisko!</h2>
 
@@ -28,7 +28,7 @@
                     <label>Lista schronisk
                         <select name="schronisko" id="schronisko" class="dropdown-select" onchange="manage_select(this)"
                             required>
-                            <option value="" disabled selected>Wybierz schronisko</option>
+                            <option value="" disabled hidden selected>Wybierz schronisko</option>
                             <option value="dog_no_home">DogNoHome Kraków</option>
                             <option value="psia_lapa">Schronisko Psia Łapa</option>
                             <option value="pomagamy">Pomagamy pieskom</option>

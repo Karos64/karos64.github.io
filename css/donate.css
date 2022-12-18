@@ -22,9 +22,6 @@ main {
     justify-content: center;
 }
 
-#data_form * {
-}
-
 #data_form label {
     font-size: 20px;
     margin-bottom: 3vw;
@@ -110,12 +107,12 @@ main {
     border: 1px black solid;
 }
 
-select {
-    color: gray;
+select:invalid {
+    color: lightgray;
 }
 
 select option {
-    color: gray;
+    color: black;
 }
 
 @media only screen and (max-width: 1300px) and (min-width: 1000px) {

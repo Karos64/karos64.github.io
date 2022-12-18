@@ -13,3 +13,18 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+/* Placeholders css */
+
+input {
+    text-indent: 6px;
+}
+
+input::placeholder, ::-webkit-datetime-edit {
+    color: lightgray;
+    text-indent: 6px;
+}
+
+.unactive-datetime-placeholder::-webkit-datetime-edit {
+    color: black !important;
+}
