@@ -77,14 +77,18 @@ function load_default_animals() {
                     animal_json.push({
                         'id': i,
                         'title': json['title'],
+                        'type': json['typ'],
                         'img': `../imgs/animals/dogs/dog${i}.jpg`,
                         'description': json['description'],
                         'gender': json['gender'],
-                        'weight': json['weight'],
-                        'age': json['age'], // this is outdated
+                        'age': json['age'],
                         'pedigree': json['pedigree'],
-                        'breed': json['breed'],
+                        'owner': json['owner'],
                         'shelter': json['shelter'],
+                        'city': json['city'],
+                        'user': json['user'],
+                        'email': json['email'],
+                        'number': json['number'],
                         'tags': json['tags']
                     })
                 })

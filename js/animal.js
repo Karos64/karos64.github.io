@@ -2,9 +2,10 @@ const buildAnimalPanel = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id')
 
+    const animalInfo = document.getElementById('animal-info');
+    const animalInfoTags = document.getElementById('animal-tags');
     const animalPhoto = document.getElementById('animal-photo');
     const animalName = document.getElementById('animal-name');
-    const animalInfo = document.getElementById('animal-info');
     const animalDesc = document.getElementById('animal-description');
     const animalTags = document.getElementById('tags');
 
@@ -23,18 +24,59 @@ const buildAnimalPanel = () => {
         }
     }
 
+    if(pet === undefined) {
+        location.href = "../index.html"
+        return false;
+    }
+
+    let info = '';
+
+    if(pet['owner'].toLowerCase() == "user") {
+        document.getElementById('adoptdog-button').style.display = "none"
+
+        info = `
+            <p>Zwierze:</p>
+            <p>Płeć:</p>
+            <p>Wiek:</p>
+            <p>Rodowód:</p>
+            <p>Miasto:</p>
+            <p>Użytkownik:</p>
+            <p>Email:</p>
+        `
+    } else {
+        info = `
+            <p>Zwierze:</p>
+            <p>Płeć:</p>
+            <p>Wiek:</p>
+            <p>Rodowód:</p>
+            <p>Schronisko:</p>
+        `
+    }
+
+    animalInfoTags.innerHTML = info;
+
     animalPhoto.src = pet['img']
     animalName.innerHTML = pet['title']
 
-    let info = `
-        <p>${pet['gender']}</p>
-        <p>${pet['weight']} kg</p>
-        <p>${pet['height']} cm</p>
-        <p>${pet['age']}</p>
-        <p>${pet['pedigree']}</p>
-        <p>${pet['breed']}</p>
-        <p>${pet['shelter']}</p>
-    `
+    if(pet['owner'].toLowerCase() == "user") {
+        info = `
+            <p>${pet['type']}</p>
+            <p>${pet['gender']} kg</p>
+            <p>${pet['age']} cm</p>
+            <p>${pet['pedigree']}</p>
+            <p>${pet['city']}</p>
+            <p>${pet['user']}</p>
+            <p>${pet['email']}</p>
+        `
+    } else {
+        info = `
+            <p>${pet['type']}</p>
+            <p>${pet['gender']} kg</p>
+            <p>${pet['age']} cm</p>
+            <p>${pet['pedigree']}</p>
+            <p>${pet['shelter']}</p>
+        `
+    }
     animalInfo.innerHTML = info
 
     let tags = ''
