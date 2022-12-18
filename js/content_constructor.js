@@ -44,42 +44,18 @@ function createElement(elem) {
 }
 
 const build_content = () => {
-    let fetches = []
-    let animal_json = []
+    // if animals not loaded
+    if(localStorage.getItem("animals") === null) return;
 
-    // load all animal files
-    for (let i = 1; i <= ANIMAL_COUNT; i++) {
-        fetches.push(
-            fetch(`../assets/animals/dog${i}.json`)
-                .then((response) => response.json())
-                .then((json) => {
-                    animal_json.push({
-                        'id': i,
-                        'title': json['title'],
-                        'img': `../imgs/dog${i}.jpg`,
-                        'description': json['description'],
-                        'gender': json['gender'],
-                        'weight': json['weight'],
-                        'age': json['age'], // this is outdated
-                        'pedigree': json['pedigree'],
-                        'breed': json['breed'],
-                        'shelter': json['shelter'],
-                        'tags': json['tags']
-                    })
-                })
-        )
-    }
+    let animal_json = JSON.parse(localStorage.getItem("animals"))
 
-    // wait for all of them to load
-    Promise.all(fetches).then(() => {
-        let parsed_data = JSON.parse(JSON.stringify(animal_json))
-        document.querySelector('#main_blocks').innerHTML = ""
-        for (let elem in parsed_data) {
-            if (check_if_meets_requirements(parsed_data[elem])){
-                createElement(parsed_data[elem]);
-            }
+    let parsed_data = JSON.parse(JSON.stringify(animal_json))
+    document.querySelector('#main_blocks').innerHTML = ""
+    for (let elem in parsed_data) {
+        if (check_if_meets_requirements(parsed_data[elem])){
+            createElement(parsed_data[elem]);
         }
-    })
+    }
 }
 
 function get_option_value(id){

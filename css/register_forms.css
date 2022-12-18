@@ -137,8 +137,12 @@ select {
     color: gray;
 }
 
+select:invalid {
+    color: lightgray;
+}
+
 select option {
-    color: gray;
+    color: black;
 }
 
 #wrong {

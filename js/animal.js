@@ -8,32 +8,43 @@ const buildAnimalPanel = () => {
     const animalDesc = document.getElementById('animal-description');
     const animalTags = document.getElementById('tags');
 
-    fetch(`../assets/animals/dog${id}.json`)
-        .then((response) => response.json())
-        .then((pet) => {
-            animalPhoto.src = pet['img']
-            animalName.innerHTML = pet['title']
+    // if animals not loaded
+    animals = localStorage.getItem("animals")
+    if(animals === null) {
+        location.href = "../index.html"
+        return false;
+    }
+    animals = JSON.parse(animals)
+    
+    for(let i = 0; i < animals.length; i++) {
+        if(animals[i]['id'] == id) {
+            var pet = animals[i]
+            break;
+        }
+    }
 
-            let info = `
-                <p>${pet['gender']}</p>
-                <p>${pet['weight']} kg</p>
-                <p>${pet['height']} cm</p>
-                <p>${pet['age']}</p>
-                <p>${pet['pedigree']}</p>
-                <p>${pet['breed']}</p>
-                <p>${pet['shelter']}</p>
-            `
-            animalInfo.innerHTML = info
+    animalPhoto.src = pet['img']
+    animalName.innerHTML = pet['title']
 
-            let tags = ''
-            for(let i = 0; i < pet['tags'].length; i++) {
-                tags += `
-                    <div class="filter">${pet['tags'][i]}</div>
-                `
-            }
+    let info = `
+        <p>${pet['gender']}</p>
+        <p>${pet['weight']} kg</p>
+        <p>${pet['height']} cm</p>
+        <p>${pet['age']}</p>
+        <p>${pet['pedigree']}</p>
+        <p>${pet['breed']}</p>
+        <p>${pet['shelter']}</p>
+    `
+    animalInfo.innerHTML = info
 
-            animalTags.innerHTML = tags
+    let tags = ''
+    for(let i = 0; i < pet['tags'].length; i++) {
+        tags += `
+            <div class="filter">${pet['tags'][i]}</div>
+        `
+    }
 
-            animalDesc.innerHTML = pet['description']
-        })
+    animalTags.innerHTML = tags
+
+    animalDesc.innerHTML = pet['description']
 }

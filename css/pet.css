@@ -35,18 +35,19 @@ main {
     justify-content: space-around;
     align-items: flex-start;
     margin: 0 10rem;
-    height: 40vh;
+    min-height: 40vh;
 }
 
 .dog-img {
     position: relative;
+    height: 100%;
     width: 50%;
-    height: 90%;
 }
 
 .dog-img img {
-    height: 100%
+    width: 100%;
 }
+
 
 .dog-name {
     position: absolute;
@@ -60,7 +61,7 @@ main {
 }
 
 .dog-info {
-    height: 40vh;
+    min-height: 40vh;
     margin: 0 1rem;
 }
 
@@ -168,4 +169,26 @@ main {
 
 .active {
     background-color: rgb(189, 189, 80);
+}
+
+@media screen and (max-width: 1600px) {
+    .dog-img img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .dog {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .dog-img {
+        width: 90%;
+        margin-bottom: 2vh;
+    }
+
+    .dog-img img {
+        width: 100%;
+    }
 }
