@@ -113,10 +113,23 @@ main {
     user-select: none;
 }
 
-.calendar-title {
+.calendar-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
     margin: 8px;
     font-size: x-large;
+}
+
+.calendar-swipe {
+    padding: 8px;
+    background-color: gray;
+}
+
+.calendar-swipe:hover {
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .calendar-confirm {
