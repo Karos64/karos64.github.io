@@ -235,3 +235,11 @@ label {
     font-size: 1.5rem;
     line-height: 5vw;
 }
+
+select option {
+    color: black;
+}
+
+select option:first-child {
+    color: gray;
+}
