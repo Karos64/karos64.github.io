@@ -35,17 +35,17 @@ const buildAnimalPanel = () => {
         document.getElementById('adoptdog-button').style.display = "none"
 
         info = `
-            <p>Zwierze:</p>
+            <p>Zwierzę:</p>
             <p>Płeć:</p>
             <p>Wiek:</p>
             <p>Rodowód:</p>
             <p>Miasto:</p>
-            <p>Użytkownik:</p>
-            <p>Email:</p>
+            <p>Właściciel:</p>
+            <p>Kontakt:</p>
         `
     } else {
         info = `
-            <p>Zwierze:</p>
+            <p>Zwierzę:</p>
             <p>Płeć:</p>
             <p>Wiek:</p>
             <p>Rodowód:</p>
@@ -61,8 +61,8 @@ const buildAnimalPanel = () => {
     if(pet['owner'].toLowerCase() == "user") {
         info = `
             <p>${pet['type']}</p>
-            <p>${pet['gender']} kg</p>
-            <p>${pet['age']} cm</p>
+            <p>${pet['gender']}</p>
+            <p>${pet['age']}</p>
             <p>${pet['pedigree']}</p>
             <p>${pet['city']}</p>
             <p>${pet['user']}</p>
@@ -71,8 +71,8 @@ const buildAnimalPanel = () => {
     } else {
         info = `
             <p>${pet['type']}</p>
-            <p>${pet['gender']} kg</p>
-            <p>${pet['age']} cm</p>
+            <p>${pet['gender']}</p>
+            <p>${pet['age']}</p>
             <p>${pet['pedigree']}</p>
             <p>${pet['shelter']}</p>
         `
