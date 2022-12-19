@@ -69,7 +69,7 @@ function get_option_value(id){
 function check_if_meets_requirements(parsed_elem){
     let search_text = document.getElementById('search_input_text').value
     if (search_text !== "") {
-        if (parsed_elem['title'].toLowerCase().includes(search_text) === false) return false;
+        if (parsed_elem['title'].toLowerCase().includes(search_text.toLowerCase()) === false) return false;
     }
 
     if (get_option_value('plec') === undefined) return true;
