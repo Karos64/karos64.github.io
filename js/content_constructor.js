@@ -69,7 +69,7 @@ function get_option_value(id){
 function check_if_meets_requirements(parsed_elem){
     let search_text = document.getElementById('search_input_text').value
     if (search_text !== "") {
-        if (parsed_elem['title'].toLowerCase().includes(search_text) === false) return false;
+        if (parsed_elem['title'].toLowerCase().includes(search_text.toLowerCase()) === false) return false;
     }
 
     if (get_option_value('plec') === undefined) return true;
@@ -80,8 +80,8 @@ function check_if_meets_requirements(parsed_elem){
     if(get_option_value('schronisko') !== ""){
         if (parsed_elem['shelter'] !== get_option_value('schronisko')) return false;
     }
-    if(get_option_value('typ') !== ""){
-        if (parsed_elem['typ'] !== get_option_value('typ')) return false;
+    if(get_option_value('type') !== ""){
+        if (parsed_elem['type'] !== get_option_value('typ')) return false;
     }
     if (get_option_value('plec') !== ""){
         if (parsed_elem['gender'] !== get_option_value('plec')) return false;

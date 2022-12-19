@@ -1,39 +1,71 @@
 
-function get_parameters(){
+async function get_last_id(json){
+    return new Promise((resolve, reject) => {
+        let max = 0
+        let id;
+        for (let obj in json) {
+            if (json[obj])
+                id = json[obj]['id']
+            if (id && id > max) {
+                max = id
+            }
+        }
+        resolve(id)
+    })
+
+}
+
+async function saveImageToLocalStorage(inputId){
+
+    return new Promise((resolve, reject) => {
+        // Get the input element with the specified id
+        let inputElement = document.getElementById(inputId);
+
+        // Get the file that was selected by the user
+        let file = inputElement.files[0];
+        let dataURL;
+        // Check if the file is an image
+        if (file.type.match(/image.*/)) {
+            // Create a new FileReader object
+            let reader = new FileReader();
+
+            // Set the onload function to run when the file has finished loading
+            reader.onload = function () {
+                // Get the data URL of the image
+                dataURL = reader.result;
+                // pet_json['img'] = "asdas"
+                resolve(dataURL)
+            };
+
+            // Read the file as a data URL
+            reader.readAsDataURL(file);
+        }
+    })
+}
+
+async function get_parameters(){
     const name = document.getElementById('name').value
     const pet = document.getElementById('pet').value
     const gender = document.getElementById('gender').value
     const age = document.getElementById('age').value
     const pedigree = document.getElementById('pedigree').value
     const description = document.getElementById('description').value
+    const tag_names = ['spacery', 'szczepienia', 'zabawa', 'samotnosc', 'przyjazny', 'szkolony', 'akceptuje_zwierzeta']
     let tags = []
-    if (document.getElementById('spacery').checked){
-        tags.push(document.getElementById('spacery').value)
-    }
-    if (document.getElementById('szczepienia').checked){
-        tags.push(document.getElementById('szczepienia').value)
-    }
-    if (document.getElementById('zabawa').checked){
-        tags.push(document.getElementById('zabawa').value)
-    }
-    if (document.getElementById('samotnosc').checked){
-        tags.push(document.getElementById('samotnosc').value)
-    }
-    if (document.getElementById('przyjazny').checked){
-        tags.push(document.getElementById('przyjazny').value)
-    }
-    if (document.getElementById('szkolony').checked){
-        tags.push(document.getElementById('szkolony').value)
-    }
-    if (document.getElementById('akceptuje_zwierzeta').checked){
-        tags.push(document.getElementById('akceptuje_zwierzeta').value)
-    }
 
+    for (let i in tag_names){
+        if (document.getElementById(tag_names[i]).checked){
+            tags.push(document.getElementById(tag_names[i]).value)
+        }
+    }
+    let animals = JSON.parse(localStorage.getItem('animals'))
+    const id = await get_last_id(animals)
+    const img_data = await saveImageToLocalStorage('file_button')
     let pet_json = {
-        "id": 1, // musi zliczać ile plików już jest i +1
+        "id": id+1,
         "title": name,
-        "typ": pet,
-        "img": "../imgs/img1.jpg", // huh pewnie że mamy dodawnie pliku
+        "type": pet,
+        "img": img_data,
         "description": description,
         "gender": gender,
         "age": age,
@@ -49,9 +81,12 @@ function get_parameters(){
     return pet_json
 }
 
-function successful_give(e) {
+async function successful_give(e) {
     e.preventDefault();
-    const pet_json = get_parameters() // tutaj będzie dodawanie do Local Storage
+    const pet_json = await get_parameters() // tutaj będzie dodawanie do Local Storage
+    let animals = JSON.parse(localStorage.getItem('animals'))
+    animals.push(pet_json)
+    localStorage.setItem("animals", JSON.stringify(animals));
     location.href = "../pages/successful_give.html"
     return false;
 }
