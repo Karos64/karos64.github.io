@@ -94,7 +94,8 @@ async function successful_give(e) {
 function create_link() {
     // const id = id pliku
     const new_link = document.getElementById("new_link");
-    new_link.href = "../pages/pet.html?id="`${length}`;
+    let animals = JSON.parse(localStorage.getItem('animals'))
+    new_link.href = `../pages/pet.html?id=${animals[animals.length - 1]['id']}`;
 }
 
 function successful_register(e) {
