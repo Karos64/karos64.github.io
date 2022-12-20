@@ -10,7 +10,8 @@ async function get_last_id(json){
                 max = id
             }
         }
-        resolve(id)
+
+        resolve(max)
     })
 
 }
