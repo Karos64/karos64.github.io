@@ -41,6 +41,10 @@ function build_template(){
     add_footer()
     lightUpOption()
     load_default_animals()
+    load_default_users()
+    load_default_shelters()
+    add_sesion()
+    console.log(localStorage)
 }
 
 const loc = window.location.pathname;
@@ -55,8 +59,8 @@ const menus = {
 }
 
 function lightUpOption() {
-    options = document.getElementsByClassName('header-button');
-    chosenOne = document.getElementsByClassName('header-button')[menus[loc]];
+    let options = document.getElementsByClassName('header-button');
+    let chosenOne = document.getElementsByClassName('header-button')[menus[loc]];
     if(chosenOne === null || chosenOne === undefined) return;
     chosenOne.style.background = "#cdcdcd";
 }
@@ -97,8 +101,95 @@ function load_default_animals() {
 
     // wait for all of them to load
     Promise.all(fetches).then(() => {
-        animals = JSON.stringify(animal_json)
+        let animals = JSON.stringify(animal_json)
         // save to local storage
         localStorage.setItem("animals", animals);
     })
+}
+
+function load_default_users() {
+    // if animals already loaded
+    if(localStorage.getItem("users") != null) return;
+
+    let fetches = []
+    let user_json = []
+    let USER_COUNT = 3
+    // load all animal files
+    for (let i = 1; i <= USER_COUNT; i++) {
+        fetches.push(
+            fetch(`../assets/users/user${i}.json`)
+                .then((response) => response.json())
+                .then((json) => {
+                    user_json.push({
+                        "id": i,
+                        "name": json['name'],
+                        "surname": json['surname'],
+                        "date": json['date'],
+                        "street": json['street'],
+                        "street-nr": json['street-nr'],
+                        "zip-code": json['zip-code'],
+                        "city": json['city'],
+                        "email": json['email'],
+                        "password": json['password'],
+                        "active": json['active'],
+                        "inactive": json['inactive'],
+                        "adopted": json['adopted']
+                    })
+                })
+        )
+    }
+
+    // wait for all of them to load
+    Promise.all(fetches).then(() => {
+        let users = JSON.stringify(user_json)
+        // save to local storage
+        localStorage.setItem("users", users);
+    })
+}
+
+function load_default_shelters() {
+    // if animals already loaded
+    if(localStorage.getItem("shelters") != null) return;
+
+    let fetches = []
+    let shelters_json = []
+    let SHELTERS_COUNT = 5
+    // load all animal files
+    for (let i = 1; i <= SHELTERS_COUNT; i++) {
+        fetches.push(
+            fetch(`../assets/shelters/shelter${i}.json`)
+                .then((response) => response.json())
+                .then((json) => {
+                    shelters_json.push({
+                        "id": i,
+                        "name": json['name'],
+                        "street": json['street'],
+                        "street-nr": json['street-nr'],
+                        "zip-code": json['zip-code'],
+                        "city": json['city'],
+                        "NIP": json['NIP'],
+                        "REGON": json['REGON'],
+                        "KRS": json['KRS'],
+                        "bank": json['bank'],
+                        "email": json['email'],
+                        "password": json['password'],
+                        "active": json['active'],
+                        "inactive": json['inactive'],
+                        "adopted": json['adopted']
+                    })
+                })
+        )
+    }
+
+    // wait for all of them to load
+    Promise.all(fetches).then(() => {
+        let shelters = JSON.stringify(shelters_json)
+        // save to local storage
+        localStorage.setItem("shelters", shelters);
+    })
+}
+
+function add_sesion(){
+    if(localStorage.getItem("session") != null) return;
+    localStorage.setItem('session', null)
 }

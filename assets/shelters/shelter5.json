@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "name": "DogNoHome",
+  "street": "Kwiatowa",
+  "street-nr": 25,
+  "zip-code": "30-437",
+  "city": "Kraków",
+  "NIP": 7118065471,
+  "REGON": 274721077,
+  "KRS": 4229404285,
+  "bank": 89935529909712189792920888,
+  "email": "dognohome@gmail.com",
+  "password": "dognohome",
+  "active": [9, 10, 11],
+  "inactive": [12, 13],
+  "adopted": []
+}
