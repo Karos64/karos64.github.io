@@ -75,17 +75,18 @@ function check_if_meets_requirements(parsed_elem){
     if (get_option_value('plec') === undefined) return true;
 
     if (get_option_value('miasto') !== "") {
-        if (parsed_elem['shelter'].includes(get_option_value('miasto')) === false) return false;
+        if (parsed_elem['city'] !== get_option_value('miasto')) return false;
     }
     if(get_option_value('schronisko') !== ""){
         if (parsed_elem['shelter'] !== get_option_value('schronisko')) return false;
     }
-    if(get_option_value('type') !== ""){
+    if(get_option_value('typ') !== ""){
         if (parsed_elem['type'] !== get_option_value('typ')) return false;
     }
     if (get_option_value('plec') !== ""){
         if (parsed_elem['gender'] !== get_option_value('plec')) return false;
     }
+
     if (get_option_value('wiek') !== "") {
         let parsed_age = parseInt(parsed_elem['age'].split(" ")[0])
         let option_range_1 = parseInt(get_option_value('wiek').split("-")[0])
