@@ -4,6 +4,8 @@ const today = date.getDate()
 const month = date.getMonth() + 1
 const year = date.getFullYear()
 
+const MAX_MONTHS = 3;
+
 function daysInMonth (month, year) {
     return new Date(year, month, 0).getDate();
 }
@@ -30,6 +32,12 @@ function changeMonth(direction) {
             displayedMonth--;
         }
     } else {
+        // block display of calendar to three months ahead
+        let a = displayedMonth;
+        let b = month;
+        if(displayedYear == year+1) a += 12;
+        if(a-b >= MAX_MONTHS) return;
+
         if(displayedMonth == 12) {
             displayedMonth = 1;
             displayedYear++;
