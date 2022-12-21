@@ -13,7 +13,11 @@ function add_header(){
         //console.log(evt);
     }, false);
 
-    request.open('GET', '../components/header.html', false)
+    if(localStorage.getItem("session") != null) {
+        request.open('GET', '../components/header_logged.html', false)
+    } else {
+        request.open('GET', '../components/header.html', false)
+    }
     request.send(null);
 
     document.getElementById("body").insertAdjacentHTML( 'afterbegin', request["responseText"] );
@@ -43,8 +47,6 @@ function build_template(){
     load_default_animals()
     load_default_users()
     load_default_shelters()
-    add_sesion()
-    console.log(localStorage)
 }
 
 const loc = window.location.pathname;
@@ -93,7 +95,8 @@ function load_default_animals() {
                         'user': json['user'],
                         'email': json['email'],
                         'number': json['number'],
-                        'tags': json['tags']
+                        'tags': json['tags'],
+                        'active': json['active'],
                     })
                 })
         )
@@ -187,9 +190,4 @@ function load_default_shelters() {
         // save to local storage
         localStorage.setItem("shelters", shelters);
     })
-}
-
-function add_sesion(){
-    if(localStorage.getItem("session") != null) return;
-    localStorage.setItem('session', null)
 }

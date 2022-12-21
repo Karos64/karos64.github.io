@@ -53,6 +53,7 @@ const build_content = () => {
     document.querySelector('#main_blocks').innerHTML = ""
     for (let elem in parsed_data) {
         if (check_if_meets_requirements(parsed_data[elem])){
+            if(parsed_data[elem]['active'] === false) continue;
             createElement(parsed_data[elem]);
         }
     }

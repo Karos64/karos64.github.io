@@ -14,7 +14,6 @@ let displayedMonth = month;
 let displayedYear = year;
 
 function changeDay(allDays, day, el) {
-    console.log(today, day, el)
     if(day < today && displayedMonth == month && displayedYear == year) return false;
     for(let i = 0; i < allDays.length; i++) {
         allDays[i].classList.remove('active')
@@ -74,7 +73,7 @@ const showCalendar = () => {
     el = document.getElementById('doginfo');
 
     el.innerHTML = `
-    <form method="GET" action="">
+    <form method="GET" action="" onsubmit="return adopt_pet(event)">
         <div class="calendar">
             <div class="calendar-header">
                 <div class="calendar-swipe" onclick="changeMonth(0)">
@@ -121,4 +120,59 @@ const showCalendar = () => {
             changeDay(daysDivs, i+1, this)
         })
     }
+}
+
+function adopt_pet(event) {
+    event.preventDefault();
+    let userData = localStorage.getItem('session');
+    let allUsers = JSON.parse(localStorage.getItem('users'));
+    let animalsData = JSON.parse(localStorage.getItem('animals'));
+    let sheltersData = JSON.parse(localStorage.getItem('shelters'));
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = Number(urlParams.get('id'));
+
+    /*
+        Czy tutaj trzeba zrobić tak, ze user po zalogowaniu od razu adoptuje tego peta wybranego?
+        Oby nie...
+    */
+    if(userData == null) {
+        window.location.href = 'login.html';
+        return false;
+    }
+
+    let user = JSON.parse(userData);
+    let animal = animalsData[id-1];
+
+    animal['active'] = false;
+    user['data']['adopted'].push(id);
+
+    for(let i = 0; i < allUsers.length; i++) {
+        if(allUsers[i]['id'] == user['data']['id']) {
+            allUsers[i]['adopted'].push(id);
+            break;
+        }
+    }
+
+    for(let shelter of sheltersData) {
+        let found = false;
+        for(let i = 0; i < shelter['active'].length; i++) {
+            if(shelter['active'][i] == id) {
+                shelter['active'].splice(i, 1);
+                shelter['inactive'].push(id);
+                found = true;
+                break;
+            }
+        }
+        if(found) break;
+    }
+
+    let test = ["siema", 25.12, true, {a: 1, b: 2}, [1, 2, 3, 4, 5], 'a', 52];
+    console.log(test)
+
+    localStorage.setItem('session', JSON.stringify(user));
+    localStorage.setItem('animals', JSON.stringify(animalsData));
+    localStorage.setItem('shelters', JSON.stringify(sheltersData));
+    localStorage.setItem('users', JSON.stringify(allUsers));
+    location.href = 'successful_adoption.html';
+    return false;
 }

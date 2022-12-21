@@ -53,7 +53,7 @@ function update_user_json_in_localStorage(id, new_json, type){
         if (json_user['id'] === id) break
     }
     users[user] = new_json
-    console.log()
+    //console.log()
     localStorage.setItem(type, JSON.stringify(users))
 }
 
@@ -175,13 +175,13 @@ async function successful_register(e) {
         } else { // tutaj dodawanie sheltera po przekierowaniu z cooperation.html
             let shelters = JSON.parse(localStorage.getItem('shelters'))
             let shelter_to_add = shelters[shelters.length - 1]
-            console.log(shelter_to_add)
+            //console.log(shelter_to_add)
             shelter_to_add['email'] = email
             shelter_to_add['password'] = password1
-            console.log(shelter_to_add)
+            //console.log(shelter_to_add)
             shelters[shelters.length - 1] = shelter_to_add
-            console.log(shelters)
-            console.log(JSON.stringify(shelters))
+            //console.log(shelters)
+            //console.log(JSON.stringify(shelters))
             localStorage.setItem('shelters', JSON.stringify(shelters))
         }
 
