@@ -12,7 +12,8 @@ let displayedMonth = month;
 let displayedYear = year;
 
 function changeDay(allDays, day, el) {
-    if(day <= today && displayedMonth == month && displayedYear == year) return false;
+    console.log(today, day, el)
+    if(day < today && displayedMonth == month && displayedYear == year) return false;
     for(let i = 0; i < allDays.length; i++) {
         allDays[i].classList.remove('active')
     }
@@ -46,11 +47,12 @@ const months = [
 ]
 
 const showCalendar = () => {
-    const startDay = new Date(displayedYear, displayedMonth-1, 1).getDay()
+    let startDay = new Date(displayedYear, displayedMonth-1, 1).getDay()
 
     dayslist = ''
-    for (let index = 1; index < startDay+7; index++) {
-        dayslist += `<div class="day"> </div>`
+    if(startDay == 0) startDay = 7;
+    for (let index = 1; index < startDay; index++) {
+        dayslist += `<div class="blankday"></div>`
         
     }
     for (let index = 1; index <= daysInMonth(displayedMonth, displayedYear); index++) {
@@ -108,7 +110,7 @@ const showCalendar = () => {
     let daysDivs = document.getElementsByClassName('day')
     for(let i = 0; i < daysDivs.length; i++) {
         daysDivs[i].addEventListener('click', function() {
-            changeDay(daysDivs, i, this)
+            changeDay(daysDivs, i+1, this)
         })
     }
 }
