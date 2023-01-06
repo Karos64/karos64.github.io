@@ -43,6 +43,13 @@ function createElement(elem) {
 
 }
 
+function prevent(event) {
+    if (event.keyCode == 13){
+        event.preventDefault()
+        build_content()
+    }
+}
+
 const build_content = () => {
     // if animals not loaded
     if(localStorage.getItem("animals") === null) return;
@@ -78,8 +85,11 @@ function check_if_meets_requirements(parsed_elem){
     if (get_option_value('miasto') !== "") {
         if (parsed_elem['city'] !== get_option_value('miasto')) return false;
     }
+    console.log("owner: ", parsed_elem['owner'])
+    console.log("option: ",  get_option_value('schronisko'))
     if(get_option_value('schronisko') !== ""){
-        if (parsed_elem['shelter'] !== get_option_value('schronisko')) return false;
+        if (parsed_elem['owner'] === 'user' && get_option_value('schronisko') !== "Osoba prywatna") return false;
+        else if (parsed_elem['owner'] === "shelter" && parsed_elem['shelter'] !== get_option_value('schronisko')) return false;
     }
     if(get_option_value('typ') !== ""){
         if (parsed_elem['type'] !== get_option_value('typ')) return false;
