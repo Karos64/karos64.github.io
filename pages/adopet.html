@@ -24,7 +24,7 @@
     <div class="search">
         <form id="search_form">
             <div id="search_input">
-                <input type="text" name="search_input" id="search_input_text" placeholder="Wyszukaj po imieniu">
+                <input type="text" name="search_input" id="search_input_text" placeholder="Wyszukaj po imieniu" onkeydown="return event.key != 'Enter';">
                 <button type="button" name="search_button" id="search_button" onclick="build_content()">
                     <i class="gg-search" id="search_field"></i>
                 </button>
