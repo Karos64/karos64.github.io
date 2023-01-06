@@ -296,10 +296,10 @@ function login(e) {
     e.preventDefault();
 
     const wrong = document.getElementById("wrong");
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
 
-    let json = get_user_from_localStorage(email, password)
+    let json = get_user_from_localStorage(email.value, password.value)
     if (json) {
         localStorage.setItem('session', JSON.stringify(json))
         location.href = "../pages/adopet.html";

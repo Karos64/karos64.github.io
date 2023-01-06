@@ -15,8 +15,6 @@ function create_localizations() {
             }
         }
     }
-
-    console.log(shelters)
     for (let shelter in shelters){
         let city = shelters[shelter]['city']
         let shelter_name = "" + shelters[shelter]['name'] + " - " + shelters[shelter]['street'] + " " + shelters[shelter]['street-nr'] + ", " + shelters[shelter]['zip-code'] + " " + shelters[shelter]['city']
@@ -29,7 +27,6 @@ function create_localizations() {
         }
 
     }
-    console.log(localizations)
     return localizations
 
 }
