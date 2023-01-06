@@ -34,7 +34,6 @@ async function saveImageToLocalStorage(inputId){
             reader.onload = function () {
                 // Get the data URL of the image
                 dataURL = reader.result;
-                // pet_json['img'] = "asdas"
                 resolve(dataURL)
             };
 
@@ -53,7 +52,6 @@ function update_user_json_in_localStorage(id, new_json, type){
         if (json_user['id'] === id) break
     }
     users[user] = new_json
-    //console.log()
     localStorage.setItem(type, JSON.stringify(users))
 }
 
@@ -118,12 +116,10 @@ async function successful_give(e) {
     e.preventDefault();
     const pet_json = await get_parameters()
     add_elem_to_localStorage('animals', pet_json)
-    // location.href = "../pages/successful_give.html"
-    return false;
+    location.href = "../pages/successful_give.html"
 }
 
 function create_link() {
-    // const id = id pliku
     const new_link = document.getElementById("new_link");
     let animals = JSON.parse(localStorage.getItem('animals'))
     new_link.href = `../pages/pet.html?id=${animals[animals.length - 1]['id']}`;
@@ -142,7 +138,7 @@ async function successful_register(e) {
     } else {
 
         let name = document.getElementById("name");
-        if (name) { // tutaj dodawanie usera po przekierowaniu z register_user.html
+        if (name) {
             name = name.value
             const surname = document.getElementById("surname").value;
             const date = document.getElementById("date").value;
@@ -175,13 +171,9 @@ async function successful_register(e) {
         } else { // tutaj dodawanie sheltera po przekierowaniu z cooperation.html
             let shelters = JSON.parse(localStorage.getItem('shelters'))
             let shelter_to_add = shelters[shelters.length - 1]
-            //console.log(shelter_to_add)
             shelter_to_add['email'] = email
             shelter_to_add['password'] = password1
-            //console.log(shelter_to_add)
             shelters[shelters.length - 1] = shelter_to_add
-            //console.log(shelters)
-            //console.log(JSON.stringify(shelters))
             localStorage.setItem('shelters', JSON.stringify(shelters))
         }
 
@@ -190,7 +182,7 @@ async function successful_register(e) {
     return false;
 }
 
-function successful_adoption(e) { // tej użyj po zatwierdzeniu kalendarza jeśli użytkownik jest zalogowany
+function successful_adoption(e) {
     e.preventDefault();
 
     const request = new XMLHttpRequest();
