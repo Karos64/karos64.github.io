@@ -9,7 +9,7 @@
     "city": "Warszawa",
     "email": "andrzejmruk@gmail.com",
     "password": "123",
-    "active": [7, 8],
+    "active": [10],
     "inactive": [],
     "adopted": []
 }

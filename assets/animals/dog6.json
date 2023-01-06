@@ -7,12 +7,11 @@
     "gender": "samiec",
     "age": "1 rok",
     "pedigree": "nie",
-    "owner": "user", 
-    "shelter": "",
-    "city": "Kraków",
-    "user": "Jan Kowalski",
-    "email": "jankowalski@gmail.com",
-    "number": "123456789",
+    "owner": "shelter",
+    "shelter": "Schronisko Psia Łapa - Fistaszkowa 39, 00-006 Warszawa",
+    "city": "Warszawa",
+    "user": "",
+    "email": "",
     "tags": [
         "Akceptuje inne zwierzęta",
         "Szkolony",
@@ -21,5 +20,5 @@
         "Przyjazny dzieciom",
         "Lubi spacery"
     ],
-    "active": true
+    "active": false
 }
