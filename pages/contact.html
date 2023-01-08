@@ -26,28 +26,27 @@
         <h2 id="h2">Masz jakieś pytanie? Skontaktuj się z nami!</h2>
         <div class="email-box">
             <div id="email-form-div">
-                <form id="email-form-id" class="email-form-class" onsubmit="return successful_contact(event)">
+                <form id="email-form-id" onsubmit="return successful_contact(event)">
 
                     <div class="email-form-group">
                         <label for="imie" class="email-label">Twoje imię</label>
                         <div class="email-input-group">
-                            <input type="text" id="Name" name="Name" required>
+                            <input type="text" id="Name" name="Name" placeholder="Imię" required>
                         </div>
                     </div>
 
                     <div class="email-form-group">
                         <label for="email" class="email-label">Twój adres e-mail</label>
                         <div class="email-input-group">
-                            <input type="email" id="Email" name="Email" required>
+                            <input type="email" id="Email" name="Email" placeholder="Adres e-mail" required>
                         </div>
                     </div>
 
                     <div class="email-form-group">
                         <label for="wiadomość" class="email-label">Twoja wiadomość</label>
                         <div class="email-input-group">
-
                             <textarea type="text" required style="height: 10vw; font-size: 1vw" rows="6"
-                                maxlength="3000" id="description"></textarea>
+                                maxlength="3000" id="description" placeholder="Wiadomość"></textarea>
                         </div>
                     </div>
 
