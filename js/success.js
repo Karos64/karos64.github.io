@@ -185,24 +185,63 @@ async function successful_register(e) {
 function successful_adoption(e) {
     e.preventDefault();
 
-    const request = new XMLHttpRequest();
-    request.open("GET", "../assets/users/user1.json", false); // zedytować po dodaniu bazy użytkowników
-    request.send(null);
-
     const wrong = document.getElementById("wrong");
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
 
-    if (request.status === 200) {
-        const data = JSON.parse(request.response);
-        if (email.value === data["email"] && password.value === data["password"]) {
-            location.href = "../pages/successful_adoption.html"
-        } else {
-            wrong.style.display = "block";
-            email.value = "";
-            password.value = "";
+    let json = get_user_from_localStorage(email.value, password.value)
+    if (json) {
+        localStorage.setItem('session', JSON.stringify(json))
+
+        let userData = localStorage.getItem('session');
+        let allUsers = JSON.parse(localStorage.getItem('users'));
+        let animalsData = JSON.parse(localStorage.getItem('animals'));
+        let sheltersData = JSON.parse(localStorage.getItem('shelters'));
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = Number(urlParams.get('id'));
+
+        if(id == null) {
+            window.location.href = 'adopet.html';
+            return false;
         }
+
+        let user = JSON.parse(userData);
+        let animal = animalsData[id-1];
+    
+        animal['active'] = false;
+        user['data']['adopted'].push(id);
+    
+        for(let i = 0; i < allUsers.length; i++) {
+            if(allUsers[i]['id'] == user['data']['id']) {
+                allUsers[i]['adopted'].push(id);
+                break;
+            }
+        }
+    
+        for(let shelter of sheltersData) {
+            let found = false;
+            for(let i = 0; i < shelter['active'].length; i++) {
+                if(shelter['active'][i] == id) {
+                    shelter['active'].splice(i, 1);
+                    shelter['inactive'].push(id);
+                    found = true;
+                    break;
+                }
+            }
+            if(found) break;
+        }
+    
+        localStorage.setItem('session', JSON.stringify(user));
+        localStorage.setItem('animals', JSON.stringify(animalsData));
+        localStorage.setItem('shelters', JSON.stringify(sheltersData));
+        localStorage.setItem('users', JSON.stringify(allUsers));
+        location.href = 'successful_adoption.html';
+    } else {
+        wrong.style.display = "block";
+        email.value = "";
+        password.value = "";
     }
+
     return false;
 }
 
@@ -230,17 +269,68 @@ function successful_login_give(e) { // przekierowanie do "Oddaj" jeśli był nie
     return false;
 }
 
-function back_to_login(e) { // tej użyj po zatwierdzeniu kalendarza jeśli użytkownik jest niezalogowany
+async function back_to_login(e) {
     e.preventDefault();
-    const password1 = document.getElementById("password");
-    const password2 = document.getElementById("password2");
+    const email = document.getElementById("email").value;
+    let password1 = document.getElementById("password").value;
+    let password2 = document.getElementById("password2").value;
     const not_identical = document.getElementById("not_identical");
-    if(password1.value !== password2.value) {
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = Number(urlParams.get('id'));
+
+    if(id == null) {
+        window.location.href = 'adopet.html';
+        return false;
+    }
+    
+    if(password1 !== password2) {
         not_identical.style.display = "block";
-        password1.value = "";
-        password2.value = "";
+        password1 = "";
+        password2 = "";
     } else {
-        location.href = "../pages/login_adopt.html"
+
+        let name = document.getElementById("name");
+        if (name) {
+            name = name.value
+            const surname = document.getElementById("surname").value;
+            const date = document.getElementById("date").value;
+            const street = document.getElementById("street").value;
+            const street_nr = document.getElementById("street-nr").value;
+            const zip_code = document.getElementById("zip-code").value;
+            const city = document.getElementById("city").value;
+
+            let users = JSON.parse(localStorage.getItem('users'))
+            let id = await get_last_id(users)
+
+            let user_json = {
+                "id": id+1,
+                "name": name,
+                "surname": surname,
+                "date": date,
+                "street": street,
+                "street-nr": street_nr,
+                "zip-code": zip_code,
+                "city": city,
+                "email": email,
+                "password": password1,
+                "active": [],
+                "inactive": [],
+                "adopted": []
+            }
+
+            add_elem_to_localStorage('users', user_json)
+
+        } else { // tutaj dodawanie sheltera po przekierowaniu z cooperation.html
+            let shelters = JSON.parse(localStorage.getItem('shelters'))
+            let shelter_to_add = shelters[shelters.length - 1]
+            shelter_to_add['email'] = email
+            shelter_to_add['password'] = password1
+            shelters[shelters.length - 1] = shelter_to_add
+            localStorage.setItem('shelters', JSON.stringify(shelters))
+        }
+
+        location.href = "../pages/login_adopt.html?id=" + id
     }
     return false;
 }

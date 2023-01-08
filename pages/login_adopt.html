@@ -27,9 +27,15 @@
     <div class="button">
       <input type="submit" class="register_button" value="Zaloguj">
     </div>
-    <div class="account">
+    <div class="account" id="account_info_div">
       <span>Nie masz jeszcze konta? </span>
-      <a id="link1" href="register_user_adopt.html">Zarejestruj się</a>
+      <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = Number(urlParams.get('id'));
+
+        document.getElementById('account_info_div').innerHTML +=
+            '<a id="link1" href="register_user_adopt.html?id=' + id + '">Zarejestruj się</a>'
+      </script>
     </div>
   </form>
 </main>

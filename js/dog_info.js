@@ -131,12 +131,8 @@ function adopt_pet(event) {
     const urlParams = new URLSearchParams(window.location.search);
     const id = Number(urlParams.get('id'));
 
-    /*
-        Czy tutaj trzeba zrobić tak, ze user po zalogowaniu od razu adoptuje tego peta wybranego?
-        Oby nie...
-    */
     if(userData == null) {
-        window.location.href = 'login.html';
+        window.location.href = 'login_adopt.html?id=' + id;
         return false;
     }
 
@@ -165,9 +161,6 @@ function adopt_pet(event) {
         }
         if(found) break;
     }
-
-    let test = ["siema", 25.12, true, {a: 1, b: 2}, [1, 2, 3, 4, 5], 'a', 52];
-    console.log(test)
 
     localStorage.setItem('session', JSON.stringify(user));
     localStorage.setItem('animals', JSON.stringify(animalsData));
