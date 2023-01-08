@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana" />
 </head>
 
-<body id="body" onload="build_template()">
+<body id="body" onload="build_template(); load_all_shelters()">
     <main>
         <h2 id="h2">Chcesz pomóc zwierzakom? Wspomóż wybrane schronisko!</h2>
 
@@ -29,9 +29,6 @@
                         <select name="schronisko" id="schronisko" class="dropdown-select" onchange="manage_select(this)"
                             required>
                             <option value="" disabled hidden selected>Wybierz schronisko</option>
-                            <option value="dog_no_home">DogNoHome Kraków</option>
-                            <option value="psia_lapa">Schronisko Psia Łapa</option>
-                            <option value="pomagamy">Pomagamy pieskom</option>
                         </select>
                     </label>
                     <label>Kwota donacji
@@ -49,7 +46,8 @@
             <div class="flex-child radio-group">
                 <div class='radio selected' data-value="credit"><img class="payment_logo"
                         src="../imgs/payments/visa_mastercard.png"></div>
-                <div class='radio' data-value="paypal"><img class="payment_logo" src="../imgs/payments/przelewy24-logo.png">
+                <div class='radio' data-value="paypal"><img class="payment_logo"
+                        src="../imgs/payments/przelewy24-logo.png">
                 </div>
                 <div class='radio' data-value="paypal"><img class="payment_logo" src="../imgs/payments/gpay.png">
                 </div>
@@ -63,7 +61,8 @@
                 </div>
                 <div class='radio' data-value="paypal"><img class="payment_logo" src="../imgs/payments/ing.png">
                 </div>
-                <div class='radio' data-value="paypal"><img class="payment_logo" src="../imgs/payments/moneytransfer.png">
+                <div class='radio' data-value="paypal"><img class="payment_logo"
+                        src="../imgs/payments/moneytransfer.png">
                 </div>
                 <br>
             </div>
