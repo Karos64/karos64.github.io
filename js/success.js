@@ -471,6 +471,12 @@ function successful_donation(e) {
     return false;
 }
 
+function successful_contact(e){
+    e.preventDefault();
+    location.href = "../pages/successful_contact.html"
+    return false;
+}
+
 function get_user_from_localStorage(email, password){
     let users = JSON.parse(localStorage.getItem('users'))
     let shelters = JSON.parse(localStorage.getItem('shelters'))
