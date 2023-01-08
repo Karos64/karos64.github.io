@@ -1,0 +1,15 @@
+{
+    "id": 4,
+    "name": "Wacław",
+    "surname": "Kocek",
+    "date": "1970-02-12",
+    "street": "Marna",
+    "street-nr": 137,
+    "zip-code": "80-000",
+    "city": "Gdańsk",
+    "email": "wacek.kocek@op.pl",
+    "password": "waclawino70",
+    "active": [13],
+    "inactive": [],
+    "adopted": []
+}

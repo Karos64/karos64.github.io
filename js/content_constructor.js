@@ -3,7 +3,7 @@ function randomize(array) {
 }
 
 // how many animals does we have in assets/animals
-const ANIMAL_COUNT = 11
+const ANIMAL_COUNT = 20;
 
 function createElement(elem) {
     let wrap_main = document.querySelector('#main_blocks');
@@ -44,7 +44,7 @@ function createElement(elem) {
 }
 
 function prevent(event) {
-    if (event.keyCode == 13){
+    if (event.keyCode == 13) {
         event.preventDefault()
         build_content()
     }
@@ -52,21 +52,21 @@ function prevent(event) {
 
 const build_content = () => {
     // if animals not loaded
-    if(localStorage.getItem("animals") === null) return;
+    if (localStorage.getItem("animals") === null) return;
 
     let animal_json = JSON.parse(localStorage.getItem("animals"))
 
     let parsed_data = JSON.parse(JSON.stringify(animal_json))
     document.querySelector('#main_blocks').innerHTML = ""
     for (let elem in parsed_data) {
-        if (check_if_meets_requirements(parsed_data[elem])){
-            if(parsed_data[elem]['active'] === false) continue;
+        if (check_if_meets_requirements(parsed_data[elem])) {
+            if (parsed_data[elem]['active'] === false) continue;
             createElement(parsed_data[elem]);
         }
     }
 }
 
-function get_option_value(id){
+function get_option_value(id) {
     const wrapper = document.getElementById(id)
     if (wrapper == undefined) return undefined;
 
@@ -74,7 +74,7 @@ function get_option_value(id){
     return wrapper_options[wrapper_options.selectedIndex].value
 }
 
-function check_if_meets_requirements(parsed_elem){
+function check_if_meets_requirements(parsed_elem) {
     let search_text = document.getElementById('search_input_text').value
     if (search_text !== "") {
         if (parsed_elem['title'].toLowerCase().includes(search_text.toLowerCase()) === false) return false;
@@ -86,15 +86,15 @@ function check_if_meets_requirements(parsed_elem){
         if (parsed_elem['city'] !== get_option_value('miasto')) return false;
     }
     console.log("owner: ", parsed_elem['owner'])
-    console.log("option: ",  get_option_value('schronisko'))
-    if(get_option_value('schronisko') !== ""){
+    console.log("option: ", get_option_value('schronisko'))
+    if (get_option_value('schronisko') !== "") {
         if (parsed_elem['owner'] === 'user' && get_option_value('schronisko') !== "Osoba prywatna") return false;
         else if (parsed_elem['owner'] === "shelter" && parsed_elem['shelter'] !== get_option_value('schronisko')) return false;
     }
-    if(get_option_value('typ') !== ""){
+    if (get_option_value('typ') !== "") {
         if (parsed_elem['type'] !== get_option_value('typ')) return false;
     }
-    if (get_option_value('plec') !== ""){
+    if (get_option_value('plec') !== "") {
         if (parsed_elem['gender'] !== get_option_value('plec')) return false;
     }
 
@@ -111,8 +111,8 @@ function check_if_meets_requirements(parsed_elem){
     let tags = document.getElementsByClassName('checkbox')
     let parsed_tags = parsed_elem['tags']
 
-    for (let tag of tags){
-        if (tag.checked){
+    for (let tag of tags) {
+        if (tag.checked) {
             if (parsed_tags.includes(tag.value) == false) return false;
         }
     }

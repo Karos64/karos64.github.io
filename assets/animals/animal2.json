@@ -1,21 +1,20 @@
 {
-    "id": 3,
-    "title": "Rin Tin Tin",
+    "id": 2,
+    "title": "Saba",
     "typ": "pies",
-    "img": "../imgs/animals/dogs/dog3.jpg",
+    "img": "../imgs/animals/animal2.jpg",
     "description": "opis jakis fajny",
-    "gender": "samiec",
+    "gender": "samica",
     "age": "1 rok",
     "pedigree": "tak",
-    "owner": "shelter", 
+    "owner": "shelter",
     "shelter": "Zwierzułek - Miła 35, 30-221 Kraków",
     "city": "Kraków",
     "user": "",
     "email": "",
     "tags": [
-        "Przyjazny dzieciom",
         "Źle znosi samotność",
-        "Szkolony"
+        "Akceptuje inne zwierzęta"
     ],
-    "active": true
+    "active": false
 }

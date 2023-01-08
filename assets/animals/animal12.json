@@ -1,0 +1,21 @@
+{
+    "id": 12,
+    "title": "Garfield",
+    "typ": "kot",
+    "img": "../imgs/animals/animal1.jpg",
+    "description": "Garfield to wielki, czerwony kot o wyjątkowo grubej i miękkiej sierści. Jego duże, zielone oczy błyszczą z inteligencji i ciekawości. Garfield uwielbia wędrować po domu i zwiedzać każdy zakamarek, ale również lubi spędzać czas na spaniu w ciepłym miejscu. Jest przyjaźnie nastawiony do ludzi i innych zwierząt, chętnie głaszcze się i mruczy przytulając się do opiekuna. Garfield jest zdrowym i młodym kotem, który szuka nowego, kochającego domu. Jeśli szukasz towarzysza na długie, zimowe wieczory, Garfield jest idealnym kandydatem!",
+    "gender": "samiec",
+    "age": "3 lata",
+    "pedigree": "nie",
+    "owner": "shelter", 
+    "shelter": "DogNoHome - Kwiatowa 25, 30-437 Kraków",
+    "city": "Kraków",
+    "user": "",
+    "email": "",
+    "tags": [
+        "Źle znosi samotność",
+        "Akceptuje inne zwierzęta",
+        "Szczepienia"
+    ],
+    "active": true
+}

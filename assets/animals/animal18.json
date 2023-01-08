@@ -1,0 +1,20 @@
+{
+    "id": 18,
+    "title": "Maryla",
+    "typ": "świnka",
+    "img": "../imgs/animals/animal1.jpg",
+    "description": "Maryla to słodka, mała świnka, która szuka nowego domu, gdzie będzie kochana przez swoich właścicieli. Jest ona aktywna i lubi zabawę. Lubi ona też natomiast leżenie i odpoczywanie. Jeśli szukasz takiego nietypowego przyjaciela, któremu oferujesz dużo miłości, Maryla na pewno poczuje się u Ciebie dobrze!",
+    "gender": "samica",
+    "age": "1 rok",
+    "pedigree": "nie",
+    "owner": "shelter", 
+    "shelter": "Zwierzułek - Miła 35, 30-221 Kraków",
+    "city": "Kraków",
+    "user": "",
+    "email": "",
+    "tags": [
+        "Uwielbia zabawę",
+        "Akcpetuje inne zwierzęta"
+    ],
+    "active": true
+}

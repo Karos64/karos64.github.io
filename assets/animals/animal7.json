@@ -1,0 +1,21 @@
+{
+    "id": 7,
+    "title": "Pluto",
+    "typ": "pies",
+    "img": "../imgs/animals/animal7.jpg",
+    "description": "Pluto jest dojrzałym berneńskim psem pasterskim. Charakteryzuje się tym, że jest bardzo spostrzegawczy oraz opiekuńczy. Sprawia to, że jest on dla człowieka jak stróż. Potrzebuje on towarzystwa człowieka, z którym to uwielbia się bawić. Jeśli szukasz psa, który nie odstąpi Cię na krok, to Pluto jest właśnie dla Ciebie.",
+    "gender": "samiec",
+    "age": "8 lat",
+    "pedigree": "nie",
+    "owner": "user", 
+    "shelter": "",
+    "city": "Kraków",
+    "user": "Jan Kowalski",
+    "email": "jankowalski@gmail.com",
+    "tags": [
+        "Źle znosi samotność",
+        "Akceptuje inne zwierzęta",
+        "Uwielbia zabawę"
+    ],
+    "active": true
+}
