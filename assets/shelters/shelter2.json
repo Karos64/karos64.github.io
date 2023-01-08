@@ -12,6 +12,6 @@
     "email": "schronisko.psia.lapa@gmail.com",
     "password": "dogfeetlovers111",
     "active": [4, 5],
-    "inactive": [6],
-    "adopted": []
-   }
+    "inactive": [],
+    "adopted": [6]
+}

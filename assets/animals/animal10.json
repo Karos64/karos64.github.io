@@ -1,0 +1,21 @@
+{
+    "id": 10,
+    "title": "Blondie",
+    "typ": "pies",
+    "img": "../imgs/animals/animal10.jpg",
+    "description": "Na taką małą wariatkę jak Blondie ciężko trafić! Pies ten jest rasy Corgi. Blondie jest bardzo, ale to bardzo, aktywna oraz pełna energii. Potrzebuje kogoś kto będzie się z nią codziennie bawił i zabierał na spacery. Jej głownym celem jest to aby zawsze być w centrum uwagi. Jeśli ktoś chce mieć w domu małego, ale bardzo aktywnego psa to Blondie jest idealna.",
+    "gender": "samica",
+    "age": "2 lata",
+    "pedigree": "tak",
+    "owner": "user",
+    "shelter": "",
+    "city": "Warszawa",
+    "user": "Andrzej Mruk",
+    "email": "andrzejmruk@gmail.com",
+    "tags": [
+        "Lubi spacery",
+        "Szkolony",
+        "Szczepienia"
+    ],
+    "active": true
+}

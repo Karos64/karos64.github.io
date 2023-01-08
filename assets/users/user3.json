@@ -9,7 +9,7 @@
     "city": "Poznań",
     "email": "ewelina1.ptak@gmail.com",
     "password": "ptaszek123",
-    "active": [],
+    "active": [15],
     "inactive": [],
     "adopted": []
 }

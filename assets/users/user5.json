@@ -1,0 +1,15 @@
+{
+    "id": 5,
+    "name": "Aniela",
+    "surname": "Masny",
+    "date": "1987-11-18",
+    "street": "Leśna",
+    "street-nr": 2,
+    "zip-code": "90-001",
+    "city": "Łodź",
+    "email": "anielka.masna111@gmail.com",
+    "password": "swinkimorskie2",
+    "active": [17],
+    "inactive": [],
+    "adopted": []
+}

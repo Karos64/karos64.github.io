@@ -11,7 +11,7 @@
     "bank": 89935529909712189792920888,
     "email": "zwierzulek@gmail.com",
     "password": "zwierzulek",
-    "active": [1, 3],
+    "active": [1, 16, 18, 20],
     "inactive": [2],
-    "adopted": []
-   }
+    "adopted": [3]
+}

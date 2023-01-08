@@ -1,0 +1,21 @@
+{
+    "id": 9,
+    "title": "Pankracy",
+    "typ": "pies",
+    "img": "../imgs/animals/animal9.jpg",
+    "description": "Pankracy jest młodziutkim, niezwykle słodkim, Golden Retrieverem. Ze wzlędu na swój wiek, będzie potrzebował zmotywowanego właściciela, który dobrze się nim zaopiekuje i wychowa. Jest on w pełni zaszczepiony, odrobaczony, a także ma chip. Pankracy jest bardzo przyjazny, zawsze chętnie się uczy, jest bardzo inteligentny i bardzo łatwo się z nim dogadać. Jest to pies, który będzie idealnym towarzyszem dla każdego, kto chce mieć przy sobie przyjaciela na całe życie.",
+    "gender": "samiec",
+    "age": "1 rok",
+    "pedigree": "tak",
+    "owner": "user", 
+    "shelter": "",
+    "city": "Kraków",
+    "user": "Jan Kowalski",
+    "email": "jankowalski@gmail.com",
+    "tags": [
+        "Lubi spacery",
+        "Szczepienia",
+        "Szkolony"
+    ],
+    "active": true
+}

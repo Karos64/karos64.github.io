@@ -1,0 +1,22 @@
+{
+    "id": 14,
+    "title": "Kuternoga",
+    "typ": "kot",
+    "img": "../imgs/animals/animal1.jpg",
+    "description": "Kuternoga to szary, europejski kot o długiej i lśniącej sierści. Ma już 4 lata i jest bardzo uroczy, ale niestety boi się ludzi. Prawdopodobnie przeżył trudne chwile w przeszłości, które sprawiły, że teraz jest tak nieufny. Choć Kuternoga potrzebuje trochę czasu, żeby się oswoić, to gdy już zaufa opiekunowi, jest bardzo przyjazny i uwielbia się przytulać. Niestety, Kuternoga ma również problemy z jedną z łapek, ale to nie przeszkadza mu w poruszaniu się i zabawie. Mimo wszystko, Kuternoga szuka kochającego domu, gdzie będzie mógł spędzić resztę swojego życia. Jeśli szukasz kota, który potrzebuje trochę czasu i miłości, aby otworzyć się na nowych ludzi, Kuternoga jest idealnym kandydatem.",
+    "gender": "samica",
+    "age": "4 lata",
+    "pedigree": "nie",
+    "owner": "shelter", 
+    "shelter": "Schronisko Anioły - Kocia 24, 45-573 Wrocław",
+    "city": "Wrocław",
+    "user": "",
+    "email": "",
+    "tags": [
+        "Wycofany",
+        "Przyjazny",
+        "Potulny",
+        "Potrzebuje czasu"
+    ],
+    "active": true
+}
