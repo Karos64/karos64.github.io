@@ -116,44 +116,6 @@ async function successful_give(e) {
 
     let userData = localStorage.getItem('session');
     if(userData == null) {
-        const name = document.getElementById('name').value
-        const pet = document.getElementById('pet').value
-        const gender = document.getElementById('gender').value
-        const age = document.getElementById('age').value
-        const pedigree = document.getElementById('pedigree').value
-        const description = document.getElementById('description').value
-        const tag_names = ['spacery', 'szczepienia', 'zabawa', 'samotnosc', 'przyjazny', 'szkolony', 'akceptuje_zwierzeta']
-        let tags = []
-
-        for (let i in tag_names){
-            if (document.getElementById(tag_names[i]).checked){
-                tags.push(document.getElementById(tag_names[i]).value)
-            }
-        }
-
-        let animals = JSON.parse(localStorage.getItem('animals'))
-        const id = await get_last_id(animals)
-        const img_data = await saveImageToLocalStorage('file_button')
-
-        let pet_json = {
-            "id": id+1,
-            "title": name,
-            "type": pet,
-            "img": img_data,
-            "description": description,
-            "gender": gender,
-            "age": age,
-            "pedigree": pedigree,
-            "owner": '',
-            "shelter": '',
-            "city": '',
-            "user": '',
-            "email": '',
-            "tags": tags
-        }
-
-        localStorage.setItem("give_info", JSON.stringify(pet_json))
-
         window.location.href = 'give_not_logged.html';
         return false;
     }
@@ -299,31 +261,7 @@ async function successful_login_give(e) {
     let json = get_user_from_localStorage(email.value, password.value)
     if (json) {
         localStorage.setItem('session', JSON.stringify(json))
-
-        let animals = JSON.parse(localStorage.getItem('animals'))
-        const id = await get_last_id(animals)
-
-        let user_json = JSON.parse(localStorage.getItem('session'))
-        let pet_json = JSON.parse(localStorage.getItem("give_info"))
-        pet_json["owner"] = user_json['type_of_user']
-        pet_json["city"] = user_json['data']['city']
-        pet_json['email'] = user_json['data']['email']
-
-        if (user_json['type_of_user'] === 'shelter'){
-            pet_json['shelter'] = "" + user_json['data']['name'] + " - " + user_json['data']['street'] + " " + user_json['data']['street-nr'] + ", " + user_json['data']['zip-code'] + " " + user_json['data']['city']
-        } else {
-            pet_json['user'] = "" + user_json['data']['name'] + user_json['data']['surname']
-        }
-
-        user_json['data']['active'].push(id+1)
-
-        update_user_json_in_localStorage(user_json['data']['id'], user_json['data'], "" + user_json['type_of_user'] + "s")
-        localStorage.setItem('session', JSON.stringify(user_json))
-
-        add_elem_to_localStorage('animals', pet_json)
-
-        localStorage.removeItem("give_info")
-        location.href = "../pages/successful_give.html"
+        location.href = "../pages/give.html"
     } else {
         wrong.style.display = "block";
         email.value = "";
