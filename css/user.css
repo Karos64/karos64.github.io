@@ -1,0 +1,131 @@
+main {
+    flex: 1;
+}
+
+.my_account {
+}
+
+#my_account_header {
+    font-size: 4vw;
+    text-align: center;
+    padding: 2vw 2vw 0 2vw;
+    position: relative;
+}
+
+.account {
+    margin: 0 25vw;
+}
+
+.data_account {
+    display: flex;
+    margin: 2vw 0;
+    border-bottom: 2px solid black;
+    padding-bottom: 2vw;
+}
+
+.header {
+    width: 12vw;
+}
+
+.data{
+    width: 38vw;
+    display: block;
+}
+
+.user, .shelter {
+    display: flex;
+}
+
+.data_text {
+    margin-bottom: 1vw;
+    width: 19vw;
+}
+
+.announcement {
+    display: flex;
+    margin: 2vw 0;
+    border-bottom: 2px solid black;
+    padding-bottom: 2vw;
+}
+
+.animal {
+    display: flex;
+    margin-bottom: 1vw;
+}
+.name {
+    width: 16vw;
+}
+
+.is_active {
+    width: 15vw;
+}
+
+.icon {
+    width: 4vw;
+}
+
+.adopted {
+    display: flex;
+    margin: 2vw 0;
+}
+
+#logout {
+    margin-top: 2vw;
+    position: absolute;
+    right: 5%;
+    top: 22%;
+}
+
+.gg-add-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 4px
+}
+.gg-add-r::after,
+.gg-add-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 5px;
+    top: 8px;
+    left: 4px
+}
+.gg-add-r::after {
+    width: 2px;
+    height: 10px;
+    top: 4px;
+    left: 8px
+}
+
+.gg-remove-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 4px
+}
+.gg-remove-r::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 5px;
+    top: 8px;
+    left: 4px
+}
+
