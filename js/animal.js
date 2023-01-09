@@ -12,7 +12,7 @@ const buildAnimalPanel = () => {
     // if animals not loaded
     animals = localStorage.getItem("animals")
     userData = localStorage.getItem("session")
-    if(animals === null || userData == null) {
+    if(animals === null) {
         location.href = "../index.html"
         return false;
     }
