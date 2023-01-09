@@ -11,11 +11,13 @@ const buildAnimalPanel = () => {
 
     // if animals not loaded
     animals = localStorage.getItem("animals")
-    if(animals === null) {
+    userData = localStorage.getItem("session")
+    if(animals === null || userData == null) {
         location.href = "../index.html"
         return false;
     }
     animals = JSON.parse(animals)
+    userData = JSON.parse(userData)
     
     for(let i = 0; i < animals.length; i++) {
         if(animals[i]['id'] == id) {
@@ -103,6 +105,13 @@ const buildAnimalPanel = () => {
 
     let adoptBtn = document.getElementById("adoptdog-button")
     if(pet['active'] && !"shelter".localeCompare(pet['owner'])) {
-        adoptBtn.style.display = "flex";
+        let found = false;
+        for(let i = 0; i < userData['data']['active'].length; i++) {
+            if(userData['data']['active'][i] == id) {
+                found = true;
+                break;
+            }
+        }
+        if(!found) adoptBtn.style.display = "flex";
     }
 }
