@@ -88,7 +88,8 @@ async function get_parameters(){
         "city": user_json['data']['city'],
         "user": "",
         "email": user_json['data']['email'],
-        "tags": tags
+        "tags": tags,
+        "adopted_at": ""
     }
 
     if (user_json['type_of_user'] === 'shelter'){
