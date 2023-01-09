@@ -17,5 +17,6 @@
         "Akceptuje inne zwierzęta",
         "Uwielbia zabawę"
     ],
-    "active": true
+    "active": true,
+    "adopted_at": ""
 }
