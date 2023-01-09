@@ -7,7 +7,6 @@ function load_all_shelters() {
             <h3>${shelters[shelter]['name']}</h3>
             <p>ul. ${shelters[shelter]['street']} ${shelters[shelter]['street-nr']}</p>
             <p>${shelters[shelter]['zip-code']} ${shelters[shelter]['city']}</p>
-            <p>tel. 123 456 789</p>
             <p>email: ${shelters[shelter]['email']}</p>
         </div>`;
     }
