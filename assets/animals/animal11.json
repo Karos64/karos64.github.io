@@ -1,0 +1,22 @@
+{
+    "id": 11,
+    "title": "Łajka",
+    "typ": "pies",
+    "img": "../imgs/animals/animal11.jpg",
+    "description": "Łajka to kundel, który został znaleziony na poboczu drogi w bardzo kiepskim stanie. Na szczęście udało się ją uratować i odzyskać zdrowie. Teraz jest bardzo szczęśliwa natomiast dalej potrzebuje czasu aby przyzwyczaić się do nowego towarzystwa. Jeśli chciałbyś zaopiekować się psem po przejściach i zaoferować mu miłość do końca życia, to Łajka chętnie do Ciebie przyjdzie!",
+    "gender": "samica",
+    "age": "5 lat",
+    "pedigree": "nie",
+    "owner": "shelter",
+    "shelter": "Schronisko Anioły - Kocia 24, 45-573 Wrocław",
+    "city": "Wrocław",
+    "user": "",
+    "email": "",
+    "tags": [
+        "Lubi spacery",
+        "Szczepienia",
+        "Szkolony",
+        "Źle znosi samotność"
+    ],
+    "active": true
+}

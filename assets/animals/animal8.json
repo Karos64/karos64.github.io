@@ -1,0 +1,22 @@
+{
+    "id": 8,
+    "title": "Piorun",
+    "typ": "pies",
+    "img": "../imgs/animals/animal8.jpg",
+    "description": "Piorun to niezwykle energiczny Owczarek Australijski. Jest on niezwykle przyjazny i chętny do współpracy z człowiekiem. Nie podąża on jednak ślepo za rozkazami właściciela, gdyż jest on psem pasterskim, potrafiacym radzić sobie samemu w znajomych sytuacjach. Uczy się on bardzo szybko oraz jest przyjacielski dla dzieci, co może go uczynić idealnym partnerem dla twojego dziecka. Jeśli szukasz bystrzaka jakim jest Piorun, to właściwie trafiłeś!",
+    "gender": "samiec",
+    "age": "10 lat",
+    "pedigree": "nie",
+    "owner": "shelter", 
+    "shelter": "Pomagamy pieskom - Losowa 70, 70-445 Łódź",
+    "city": "Łódź",
+    "user": "",
+    "email": "",
+    "tags": [
+        "Źle znosi samotność",
+        "Przyjazny dzieciom",
+        "Szkolony",
+        "Uwielbia zabawę"
+    ],
+    "active": true
+}

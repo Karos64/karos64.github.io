@@ -1,0 +1,21 @@
+{
+    "id": 13,
+    "title": "Mruczka",
+    "typ": "kot",
+    "img": "../imgs/animals/animal1.jpg",
+    "description": "Mruczka to piękna, szara kotka o długiej i gęstej sierści. Ma już 5 lat, ale wciąż jest pełna energii i radości. Niestety, Mruczka ostatnio miała wypadek, który sprawił, że jej prawe przednie łapki są nieco sztywne. Nie przeszkadza jej to jednak w wypełnianiu codziennych czynności i cieszeniu się życiem. Mruczka jest bardzo towarzyska i przyjazna, lubi się bawić i głaskać. Uwielbia też mruczeć i purkać wtulając się w swojego opiekuna. Mruczka szuka nowego, kochającego domu, w którym będzie mogła spędzić resztę swoich dni. Jeśli szukasz kotki pełnej miłości i radości, Mruczka jest właśnie dla Ciebie!",
+    "gender": "samica",
+    "age": "5 lat",
+    "pedigree": "nie",
+    "owner": "user", 
+    "shelter": "",
+    "city": "Gdańsk",
+    "user": "Wacław Kocek",
+    "email": "wacek.kocek@op.pl",
+    "tags": [
+        "Szczepienia",
+        "Uwielbia zabawę",
+        "Akceptuje inne zwierzęta"
+    ],
+    "active": true
+}

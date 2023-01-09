@@ -77,14 +77,14 @@ function load_default_animals() {
     // load all animal files
     for (let i = 1; i <= ANIMAL_COUNT; i++) {
         fetches.push(
-            fetch(`../assets/animals/dog${i}.json`)
+            fetch(`../assets/animals/animal${i}.json`)
                 .then((response) => response.json())
                 .then((json) => {
                     animal_json.push({
                         'id': i,
                         'title': json['title'],
                         'type': json['typ'],
-                        'img': `../imgs/animals/dogs/dog${i}.jpg`,
+                        'img': `../imgs/animals/animal${i}.jpg`,
                         'description': json['description'],
                         'gender': json['gender'],
                         'age': json['age'],
@@ -116,7 +116,7 @@ function load_default_users() {
 
     let fetches = []
     let user_json = []
-    let USER_COUNT = 3
+    let USER_COUNT = 5
     // load all animal files
     for (let i = 1; i <= USER_COUNT; i++) {
         fetches.push(

@@ -1,0 +1,20 @@
+{
+    "id": 15,
+    "title": "Pikachu",
+    "typ": "papuga",
+    "img": "../imgs/animals/animal1.jpg",
+    "description": "Pikachu to urocza, młoda papuga o jasnożółtym upierzeniu i ciemnych, inteligentnych oczach. Ma zaledwie rok, więc jest pełna energii i chęci do zabawy. Pikachu uwielbia latać i skakać po swoim klatkowym domku, a także bawić się różnymi zabawkami. Jest bardzo towarzyska i lubi być w centrum uwagi, chętnie mówiąc i śpiewając dla swoich opiekunów. Pikachu jest zdrową i radosną papugą, która szuka nowego, kochającego domu, gdzie będzie mogła rozwijać swoje umiejętności i cieszyć się życiem. Jeśli szukasz energicznego i towarzyskiego towarzysza, Pikachu jest idealnym wyborem!",
+    "gender": "samiec",
+    "age": "1 rok",
+    "pedigree": "nie",
+    "owner": "user", 
+    "shelter": "",
+    "city": "Poznań",
+    "user": "Ewelina Ptak",
+    "email": "ewelina1.ptak@gmail.com",
+    "tags": [
+        "Akceptuje inne zwierzęta",
+        "Uwielbia zabawę"
+    ],
+    "active": true
+}

@@ -2,8 +2,8 @@
     "id": 5,
     "title": "Ren",
     "typ": "pies",
-    "img": "../imgs/animals/dogs/dog5.jpg",
-    "description": "opis jakis fajny",
+    "img": "../imgs/animals/animal5.jpg",
+    "description": "Ren ma swoje pierwsze urodziny za sobą ale już wykazuje cechy dorosłego psa. Jest on bardzo inteligentny i szybko się uczy. Uwielbia zabawę wraz z ludźmi, a przede wszystkim, dziećmi. Skory jest rownież do zabawy z innymi psami. Ren jest szczepiony oraz posiada ma chipa. Jeśli szukasz przyjaciela na całe życie, to Ren jest właśnie dla Ciebie.",
     "gender": "samiec",
     "age": "1 rok",
     "pedigree": "nie",
@@ -19,7 +19,7 @@
         "Szkolony",
         "Przyjazny dzieciom",
         "Lubi spacery",
-        "Źle znosi samotność"
+        "Inteligentny"
     ],
     "active": true
 }

@@ -1,6 +1,7 @@
 main {
     position: relative;
     min-height: 50vw;
+    flex: 1;
 }
 
 .navigation {
@@ -116,6 +117,7 @@ input {
 span {
     font-size: 1vw;
 }
+
 #link, #link1, #link2 {
     font-size: 1vw;
     text-decoration: underline;

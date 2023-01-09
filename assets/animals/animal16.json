@@ -1,0 +1,21 @@
+{
+    "id": 16,
+    "title": "Wacek",
+    "typ": "chomik",
+    "img": "../imgs/animals/animal1.jpg",
+    "description": "Wacek to uroczy, mały chomik dżungalski o ciemnym i gęstym futerku. Ma już 5 lat, ale nadal jest pełen energii i radości. Wacek uwielbia biegać po swoim klatkowym domku i zwiedzać nowe miejsca, a także bawić się różnymi zabawkami i ukrywać się w swoich hamakach. Jest bardzo towarzyski i lubi być blisko swoich opiekunów, chętnie mrucząc i przytulając się do nich. Wacek jest zdrowym i radosnym chomikiem, który szuka nowego, kochającego domu, gdzie będzie mógł spędzić resztę swojego życia. Jeśli szukasz małego, ale wesołego towarzysza, Wacek jest idealnym kandydatem!",
+    "gender": "samiec",
+    "age": "5 lat",
+    "pedigree": "nie",
+    "owner": "shelter", 
+    "shelter": "Zwierzułek - Miła 35, 30-221 Kraków",
+    "city": "Kraków",
+    "user": "",
+    "email": "",
+    "tags": [
+        "Źle znosi samotność",
+        "Akceptuje inne zwierzęta",
+        "Uwielbia zabawę"
+    ],
+    "active": true
+}

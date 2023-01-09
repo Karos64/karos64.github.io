@@ -1,0 +1,25 @@
+{
+    "id": 1,
+    "title": "Scooby Doo",
+    "typ": "pies",
+    "img": "../imgs/animals/animal1.jpg",
+    "description": "Scooby Doo to uroczy, młody pies rasy Corgi o długim i gęstym futerku. Ma zaledwie kilka lat i jest pełen energii i chęci do zabawy. Scooby Doo jest szkolony i szczepiony, więc jest gotowy do nowego, kochającego domu. Lubi spacery i jest bardzo towarzyski, lubiąc przebywać w towarzystwie swoich opiekunów i innych zwierząt. Jest zdrowym i radosnym psem, który szuka nowego, kochającego domu, gdzie będzie mógł spędzić resztę swojego życia. Jeśli szukasz uroczego i towarzyskiego psa, Scooby Doo jest idealnym kandydatem!",
+    "gender": "samiec",
+    "age": "2 lata",
+    "pedigree": "tak",
+    "owner": "shelter", 
+    "shelter": "Zwierzułek - Miła 35, 30-221 Kraków",
+    "city": "Kraków",
+    "user": "",
+    "email": "",
+    "tags": [
+        "Szkolony",
+        "Uwielbia zabawę",
+        "Źle znosi samotność",
+        "Akceptuje inne zwierzęta",
+        "Szczepienia",
+        "Przyjazny dzieciom",
+        "Lubi spacery"
+    ],
+    "active": true
+}

@@ -1,0 +1,20 @@
+{
+    "id": 19,
+    "title": "Miki",
+    "typ": "myszka",
+    "img": "../imgs/animals/animal1.jpg",
+    "description": "Miki to mała mysz, która szuka towarzystwa oraz opiekuna. Miki jest dość młodym osobnikiem, który potrzebowałby towarzystwa innych gryzoni by nie czuć się samotnym. Jest on bardzo towarzyski jak i przyjazny dla człowieka. Lubi się chować oraz biegać po wolnych przestrzeniach. Jeśli jesteś już właścicielem jakichś gryzotni to Miki będzie idealnym dodatkiem do Twojego domu.",
+    "gender": "samiec",
+    "age": "1 rok",
+    "pedigree": "nie",
+    "owner": "shelter", 
+    "shelter": "Schronisko Anioły - Kocia 24, 45-573 Wrocław",
+    "city": "Wrocław",
+    "user": "",
+    "email": "",
+    "tags": [
+        "Akceptuje inne zwierzęta",
+        "Źle znosi samotność"
+    ],
+    "active": true
+}
