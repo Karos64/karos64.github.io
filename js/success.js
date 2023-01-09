@@ -188,6 +188,63 @@ async function successful_register(e) {
     return false;
 }
 
+async function successful_register_give(e) {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    let password1 = document.getElementById("password").value;
+    let password2 = document.getElementById("password2").value;
+    const not_identical = document.getElementById("not_identical");
+    if(password1 !== password2) {
+        not_identical.style.display = "block";
+        password1 = "";
+        password2 = "";
+    } else {
+
+        let name = document.getElementById("name");
+        if (name) {
+            name = name.value
+            const surname = document.getElementById("surname").value;
+            const date = document.getElementById("date").value;
+            const street = document.getElementById("street").value;
+            const street_nr = document.getElementById("street-nr").value;
+            const zip_code = document.getElementById("zip-code").value;
+            const city = document.getElementById("city").value;
+
+            let users = JSON.parse(localStorage.getItem('users'))
+            let id = await get_last_id(users)
+
+            let user_json = {
+                "id": id+1,
+                "name": name,
+                "surname": surname,
+                "date": date,
+                "street": street,
+                "street-nr": street_nr,
+                "zip-code": zip_code,
+                "city": city,
+                "email": email,
+                "password": password1,
+                "active": [],
+                "inactive": [],
+                "adopted": []
+            }
+
+            add_elem_to_localStorage('users', user_json)
+
+        } else { // tutaj dodawanie sheltera po przekierowaniu z cooperation.html
+            let shelters = JSON.parse(localStorage.getItem('shelters'))
+            let shelter_to_add = shelters[shelters.length - 1]
+            shelter_to_add['email'] = email
+            shelter_to_add['password'] = password1
+            shelters[shelters.length - 1] = shelter_to_add
+            localStorage.setItem('shelters', JSON.stringify(shelters))
+        }
+
+        location.href = "../pages/give_not_logged.html"
+    }
+    return false;
+}
+
 function successful_adoption(e) {
     e.preventDefault();
 
@@ -494,6 +551,42 @@ async function register_shelter(e) {
     }
     add_elem_to_localStorage('shelters', shelter_json)
     location.href = "../pages/register_shelter.html"
+    return false;
+}
+
+async function register_shelter_give(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value
+    const street = document.getElementById('street').value
+    const street_nr = document.getElementById('street-nr').value
+    const zip_code = document.getElementById('zip-code').value
+    const city = document.getElementById('city').value
+    const nip = document.getElementById('nip').value
+    const regon = document.getElementById('regon').value
+    const krs = document.getElementById('krs').value
+    const bank = document.getElementById('bank').value
+
+    let id = await get_last_id(JSON.parse(localStorage.getItem('animals')))
+
+    let shelter_json = {
+        "id": id+1,
+        "name": name,
+        "street": street,
+        "street-nr": street_nr,
+        "zip-code": zip_code,
+        "city": city,
+        "NIP": nip,
+        "REGON": regon,
+        "KRS": krs,
+        "bank": "" + bank, // this has to be string, does it work tho?
+        "email": "",
+        "password": "",
+        "active": [],
+        "inactive": [],
+        "adopted": []
+    }
+    add_elem_to_localStorage('shelters', shelter_json)
+    location.href = "../pages/register_shelter_give.html"
     return false;
 }
 

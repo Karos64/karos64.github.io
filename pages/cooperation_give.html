@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adop(e)t</title>
+  <style></style>
+  <script type="text/javascript" src="../js/header_footer.js"></script>
+  <script type="text/javascript" defer src="../js/cooperation.js"></script>
+  <script type="text/javascript" src="../js/success.js"></script>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/register_forms.css">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/gentium-book-basic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Italiana"/>
+</head>
+<body id="body" onload="build_template()">
+<main class="main2">
+  <h2 class="h2">Chcesz nawiązać współpracę? Zarejestruj swoje schronisko</h2>
+  <form class="data_form" onsubmit="return register_shelter_give(event)">
+    <label>Nazwa</label>
+    <input type="text" id="name" placeholder="Nazwa" required><br>
+    <div class="address">
+      <div class="street">
+        <label>Ulica</label>
+        <input type="text" id="street" placeholder="Ulica" required>
+      </div>
+      <div class="number">
+        <label>Numer</label>
+        <input type="number" id="street-nr" placeholder="Numer" required>
+      </div>
+      <div class="zip_code">
+        <label>Kod pocztowy</label>
+        <input type="zip" id="zip-code" pattern="[0-9]{2}-[0-9]{3}" placeholder="Kod pocztowy" required>
+      </div>
+      <div class="city">
+        <label>Miasto</label>
+        <input type="text" id="city" placeholder="Miasto" required>
+      </div>
+    </div>
+    <br>
+    <label>NIP</label>
+    <input type="text" id="nip" placeholder="NIP" maxlength="10" minlength="10" pattern="[0-9]{10}" required><br>
+    <label>REGON</label>
+    <input type="text" id="regon" placeholder="REGON" maxlength="9" minlength="9" pattern="[0-9]{9}" required><br>
+    <label>KRS</label>
+    <input type="text" id="krs" placeholder="KRS" maxlength="10" minlength="10" pattern="[0-9]{10}"><br>
+    <label>Numer konta bankowego</label>
+    <input type="text" id="bank" placeholder="Numer konta bankowego" maxlength="26" minlength="26" pattern="[0-9]{26}" required><br>
+    <div class="button">
+      <input type="submit" class="submit_button" value="Zatwierdź">
+    </div>
+  </form>
+</main>
+</body>
+</html>
