@@ -141,21 +141,35 @@ function adopt_pet(event) {
     }
 
     let user = JSON.parse(userData);
-    let animal = animalsData[id-1];
 
-    animal['active'] = false;
-    animal['adopted_at'] = pickedDay + "." + displayedMonth + "." + displayedYear
-    user['data']['adopted'].push(id);
-
-    for(let i = 0; i < allUsers.length; i++) {
-        if(allUsers[i]['id'] == user['data']['id']) {
-            allUsers[i]['adopted'].push(id);
-            break;
+    for(let i = 0; i < animalsData.length; i++) {
+        if(animalsData[i]['id'] == id) {
+            animalsData[i]['active'] = false;
+            animalsData[i]['adopted_at'] = pickedDay + "." + displayedMonth + "." + displayedYear
+            break
         }
     }
 
+    user['data']['adopted'].push(id);
+
+    if(!"shelter".localeCompare(user['type_of_user'])) {
+        for(let i = 0; i < sheltersData.length; i++) {
+            if(sheltersData[i]['id'] == user['data']['id']) {
+                sheltersData[i]['adopted'].push(id);
+                break;
+            }
+        }
+    } else {
+        for(let i = 0; i < allUsers.length; i++) {
+            if(allUsers[i]['id'] == user['data']['id']) {
+                allUsers[i]['adopted'].push(id);
+                break;
+            }
+        }
+    }
+
+    let found = false;
     for(let shelter of sheltersData) {
-        let found = false;
         for(let i = 0; i < shelter['active'].length; i++) {
             if(shelter['active'][i] == id) {
                 shelter['active'].splice(i, 1);
@@ -166,6 +180,21 @@ function adopt_pet(event) {
         }
         if(found) break;
     }
+
+    if(!found) {
+        for(let user of allUsers) {
+            for(let i = 0; i < user['active'].length; i++) {
+                if(user['active'][i] == id) {
+                    user['active'].splice(i, 1);
+                    user['inactive'].push(id);
+                    found = true;
+                    break;
+                }
+            }
+            if(found) break;
+        }
+    }
+
 
     localStorage.setItem('session', JSON.stringify(user));
     localStorage.setItem('animals', JSON.stringify(animalsData));

@@ -70,8 +70,6 @@ function get_user_data() {
     for(let i=0; i < activePets.length; i++) {
         for(let j=0; j < animalsData.length; j++) {
             if(animalsData[j]['id'] == activePets[i]) {
-                if(animalsData[j]['adopted_at'] != null) continue;
-                
                 let animal = animalsData[j]
                 givenPetsDiv.innerHTML += `
                     <div class="animal">
@@ -90,13 +88,30 @@ function get_user_data() {
         for(let j=0; j < animalsData.length; j++) {
             if(animalsData[j]['id'] == inactivePets[i]) {
                 if(animalsData[j]['adopted_at'] != null) continue;
-                
                 let animal = animalsData[j]
                 givenPetsDiv.innerHTML += `
                     <div class="animal">
                         <a href="pet.html?id=${animal['id']}" class="name">${animal['title']}</a>
                         <p class="is_active">NIEAKTYWNE</p>
                         <i class="icon gg-add-r" title="Dodaj ponownie" onclick="addPet(${animal['id']})"></i>
+                    </div>
+                `
+                break
+            }
+        }
+    }
+
+    // ADOPTED
+    for(let i=0; i < inactivePets.length; i++) {
+        for(let j=0; j < animalsData.length; j++) {
+            if(animalsData[j]['id'] == inactivePets[i]) {
+                if(animalsData[j]['adopted_at'] == null) continue;
+                let animal = animalsData[j]
+                givenPetsDiv.innerHTML += `
+                    <div class="animal">
+                        <a href="pet.html?id=${animal['id']}" class="name">${animal['title']}</a>
+                        <p class="is_active">ADOPTOWANY</p>
+                        <i class="icon gg-add-r" title="Anuluj adopcje" onclick="addPet(${animal['id']})"></i>
                     </div>
                 `
                 break
@@ -157,15 +172,18 @@ function addPet(id) {
 
     userData = JSON.parse(userData)
 
+    // set animal info
     for(let i=0; i < animalsData.length; i++) {
         if(animalsData[i]['id'] == id) {
             animalsData[i]['active'] = true
+            animalsData[i]['adopted_at'] = null
             break
         }
     }
 
+    // set shelter or user info
+    let found = false;
     for(let shelter of sheltersData) {
-        let found = false;
         for(let i = 0; i < shelter['inactive'].length; i++) {
             if(shelter['inactive'][i] == id) {
                 shelter['inactive'].splice(i, 1);
@@ -177,12 +195,50 @@ function addPet(id) {
         if(found) break;
     }
 
+    if(!found) {
+        for(let user of allUsers) {
+            for(let i = 0; i < user['inactive'].length; i++) {
+                if(user['inactive'][i] == id) {
+                    user['inactive'].splice(i, 1);
+                    user['active'].push(id);
+                    found = true;
+                    break;
+                }
+            }
+            if(found) break;
+        }
+    }
+
+    // set session info
     for(let i = 0; i < userData['data']['inactive'].length; i++) {
         if(userData['data']['inactive'][i] == id) {
             userData['data']['inactive'].splice(i, 1);
             userData['data']['active'].push(id);
-            found = true;
             break;
+        }
+    }
+
+    // delete adopted flag if adopted
+    found = false;
+    for(let i = 0; i < allUsers.length; i++) {
+        for(let j = 0; j < allUsers[i]['adopted'].length; j++) {
+            if(allUsers[i]['adopted'][j] == id) {
+                allUsers[i]['adopted'].splice(j, 1);
+                found = true;
+            }
+        }
+        if(found) break;
+    }
+
+    if(!found) {
+        for(let i = 0; i < sheltersData.length; i++) {
+            for(let j = 0; j < sheltersData[i]['adopted'].length; j++) {
+                if(sheltersData[i]['adopted'][j] == id) {
+                    sheltersData[i]['adopted'].splice(j, 1);
+                    found = true;
+                }
+            }
+            if(found) break;
         }
     }
 
