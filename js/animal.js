@@ -89,4 +89,9 @@ const buildAnimalPanel = () => {
     animalTags.innerHTML = tags
 
     animalDesc.innerHTML = pet['description']
+
+    let adoptBtn = document.getElementById("adoptdog-button")
+    if(pet['active']) {
+        adoptBtn.style.display = "flex";
+    }
 }

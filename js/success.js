@@ -485,7 +485,7 @@ async function register_shelter(e) {
         "NIP": nip,
         "REGON": regon,
         "KRS": krs,
-        "bank": bank,
+        "bank": "" + bank, // this has to be string, does it work tho?
         "email": "",
         "password": "",
         "active": [],

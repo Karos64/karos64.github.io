@@ -5,6 +5,10 @@ main {
 .my_account {
 }
 
+.type_of_account {
+    display: none;
+}
+
 #my_account_header {
     font-size: 4vw;
     text-align: center;

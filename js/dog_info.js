@@ -13,12 +13,15 @@ function daysInMonth (month, year) {
 let displayedMonth = month;
 let displayedYear = year;
 
+let pickedDay = 0;
+
 function changeDay(allDays, day, el) {
     if(day < today && displayedMonth == month && displayedYear == year) return false;
     for(let i = 0; i < allDays.length; i++) {
         allDays[i].classList.remove('active')
     }
     el.classList.add('active')
+    pickedDay = day;
 }
 
 function changeMonth(direction) {
@@ -65,6 +68,7 @@ const showCalendar = () => {
     for (let index = 1; index <= daysInMonth(displayedMonth, displayedYear); index++) {
         if(index == today && displayedMonth == month && displayedYear == year) {
             dayslist += '<div class="day active">' + index + '</div>'
+            pickedDay = index;
             continue
         }
         dayslist += '<div class="day">' + index + '</div>'
@@ -140,6 +144,7 @@ function adopt_pet(event) {
     let animal = animalsData[id-1];
 
     animal['active'] = false;
+    animal['adopted_at'] = pickedDay + "." + displayedMonth + "." + displayedYear
     user['data']['adopted'].push(id);
 
     for(let i = 0; i < allUsers.length; i++) {
