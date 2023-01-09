@@ -12,6 +12,6 @@
     "email": "zwierzulek@gmail.com",
     "password": "zwierzulek",
     "active": [1, 16, 18, 20],
-    "inactive": [2],
-    "adopted": [3]
+    "inactive": [2, 3],
+    "adopted": []
 }
