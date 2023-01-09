@@ -9,7 +9,7 @@
   "city": "Kraków",
   "email": "jankowalski@gmail.com",
   "password": "jankowalski",
-  "active": [7, 9],
+  "active": [9],
   "inactive": [],
-  "adopted": []
+  "adopted": [7]
 }
