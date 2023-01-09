@@ -65,7 +65,7 @@ const buildAnimalPanel = () => {
         "kot": "kot",
         "papuga": "papuga",
         "chomik": "chomik",
-        "swinka_morska": "świnka Morska",
+        "swinka_morska": "świnka morska",
         "swinka": "świnka",
         "mysz": "myszka",
         "waz": "wąż"
