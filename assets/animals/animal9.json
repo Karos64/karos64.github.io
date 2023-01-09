@@ -17,5 +17,6 @@
         "Szczepienia",
         "Szkolony"
     ],
-    "active": true
+    "active": true,
+    "adopted_at": ""
 }
