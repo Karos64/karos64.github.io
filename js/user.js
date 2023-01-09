@@ -70,6 +70,8 @@ function get_user_data() {
     for(let i=0; i < activePets.length; i++) {
         for(let j=0; j < animalsData.length; j++) {
             if(animalsData[j]['id'] == activePets[i]) {
+                if(animalsData[j]['adopted_at'] != null) continue;
+                
                 let animal = animalsData[j]
                 givenPetsDiv.innerHTML += `
                     <div class="animal">
@@ -87,6 +89,8 @@ function get_user_data() {
     for(let i=0; i < inactivePets.length; i++) {
         for(let j=0; j < animalsData.length; j++) {
             if(animalsData[j]['id'] == inactivePets[i]) {
+                if(animalsData[j]['adopted_at'] != null) continue;
+                
                 let animal = animalsData[j]
                 givenPetsDiv.innerHTML += `
                     <div class="animal">
