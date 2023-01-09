@@ -16,5 +16,6 @@
         "Źle znosi samotność",
         "Akceptuje inne zwierzęta"
     ],
-    "active": false
+    "active": false,
+    "adopted_at": ""
 }

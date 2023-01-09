@@ -17,5 +17,6 @@
         "Akceptuje inne zwierzęta",
         "Szczepienia"
     ],
-    "active": true
+    "active": true,
+    "adopted_at": ""
 }
