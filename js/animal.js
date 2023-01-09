@@ -102,7 +102,7 @@ const buildAnimalPanel = () => {
     animalDesc.innerHTML = pet['description']
 
     let adoptBtn = document.getElementById("adoptdog-button")
-    if(pet['active']) {
+    if(pet['active'] && !"shelter".localeCompare(pet['owner'])) {
         adoptBtn.style.display = "flex";
     }
 }
