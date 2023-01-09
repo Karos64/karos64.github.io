@@ -58,9 +58,20 @@ const buildAnimalPanel = () => {
     animalPhoto.src = pet['img']
     animalName.innerHTML = pet['title']
 
+    typ_cast = {
+        "pies": "Pies",
+        "kot": "Kot",
+        "papuga": "Papuga",
+        "chomik": "Chomik",
+        "swinka_morska": "Świnka Morska",
+        "swinka":"Świnka",
+        "mysz": "Myszka",
+        "waz": "Wąż"
+    }
+
     if(pet['owner'].toLowerCase() == "user") {
         info = `
-            <p>${pet['type']}</p>
+            <p>${typ_cast[pet['type']]}</p>
             <p>${pet['gender']}</p>
             <p>${pet['age']}</p>
             <p>${pet['pedigree']}</p>
@@ -70,7 +81,7 @@ const buildAnimalPanel = () => {
         `
     } else {
         info = `
-            <p>${pet['type']}</p>
+            <p>${typ_cast[pet['type']]}</p>
             <p>${pet['gender']}</p>
             <p>${pet['age']}</p>
             <p>${pet['pedigree']}</p>
