@@ -59,14 +59,14 @@ const buildAnimalPanel = () => {
     animalName.innerHTML = pet['title']
 
     typ_cast = {
-        "pies": "Pies",
-        "kot": "Kot",
-        "papuga": "Papuga",
-        "chomik": "Chomik",
-        "swinka_morska": "Świnka Morska",
-        "swinka":"Świnka",
-        "mysz": "Myszka",
-        "waz": "Wąż"
+        "pies": "pies",
+        "kot": "kot",
+        "papuga": "papuga",
+        "chomik": "chomik",
+        "swinka_morska": "świnka Morska",
+        "swinka": "świnka",
+        "mysz": "myszka",
+        "waz": "wąż"
     }
 
     if(pet['owner'].toLowerCase() == "user") {
