@@ -87,7 +87,7 @@ function get_user_data() {
     for(let i=0; i < inactivePets.length; i++) {
         for(let j=0; j < animalsData.length; j++) {
             if(animalsData[j]['id'] == inactivePets[i]) {
-                if(animalsData[j]['adopted_at'].length != 0) continue;
+                if(animalsData[j]['adopted_at'] != null && animalsData[j]['adopted_at'].length != 0) continue;
                 let animal = animalsData[j]
                 givenPetsDiv.innerHTML += `
                     <div class="animal">
@@ -105,7 +105,7 @@ function get_user_data() {
     for(let i=0; i < inactivePets.length; i++) {
         for(let j=0; j < animalsData.length; j++) {
             if(animalsData[j]['id'] == inactivePets[i]) {
-                if(animalsData[j]['adopted_at'].length == 0) continue;
+                if(animalsData[j]['adopted_at'] == null || animalsData[j]['adopted_at'].length == 0) continue;
                 let animal = animalsData[j]
                 givenPetsDiv.innerHTML += `
                     <div class="animal">
