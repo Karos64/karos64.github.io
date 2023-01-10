@@ -17,6 +17,6 @@
         "Akceptuje inne zwierzęta",
         "Uwielbia zabawę"
     ],
-    "active": true,
+    "active": false,
     "adopted_at": "17.09.2022"
 }
