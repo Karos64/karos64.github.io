@@ -11,13 +11,11 @@ const buildAnimalPanel = () => {
 
     // if animals not loaded
     animals = localStorage.getItem("animals")
-    userData = localStorage.getItem("session")
     if(animals === null) {
         location.href = "../index.html"
         return false;
     }
     animals = JSON.parse(animals)
-    userData = JSON.parse(userData)
     
     for(let i = 0; i < animals.length; i++) {
         if(animals[i]['id'] == id) {
@@ -105,11 +103,16 @@ const buildAnimalPanel = () => {
 
     let adoptBtn = document.getElementById("adoptdog-button")
     if(pet['active'] && !"shelter".localeCompare(pet['owner'])) {
+        userData = localStorage.getItem("session")
         let found = false;
-        for(let i = 0; i < userData['data']['active'].length; i++) {
-            if(userData['data']['active'][i] == id) {
-                found = true;
-                break;
+        if(userData != null) {
+            userData = JSON.parse(userData)
+            for(let i = 0; i < userData['data']['active'].length; i++) {
+                if(userData['data']['active'][i] == id) {
+                    found = true;
+                    console.log("yikes")
+                    break;
+                }
             }
         }
         if(!found) adoptBtn.style.display = "flex";
