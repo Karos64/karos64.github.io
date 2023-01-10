@@ -97,6 +97,7 @@ function load_default_animals() {
                         'number': json['number'],
                         'tags': json['tags'],
                         'active': json['active'],
+                        'adopted_at': json['adopted_at']
                     })
                 })
         )
